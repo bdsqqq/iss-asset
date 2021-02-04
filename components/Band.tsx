@@ -1,6 +1,5 @@
 interface BandPropsBasic {
   dark?: boolean;
-  hero?: boolean;
   cta?:
     | {
         external?: boolean;
@@ -35,7 +34,6 @@ type BandProps = BandWithGrid | BandGridless;
 
 const Band: React.FC<BandProps> = ({
   dark,
-  hero,
   gridless,
   id,
   headline,
@@ -52,7 +50,7 @@ const Band: React.FC<BandProps> = ({
     <>
       <section
         id={bandId.replace(/\s+/g, "-").toLowerCase()}
-        className={`w-full py-16 ${hero && "h-screen md:h-85vh"}
+        className={`relative w-full py-16
         ${dark ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"}`}
       >
         <div
