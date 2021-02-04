@@ -1,7 +1,7 @@
 const Container: React.FC = ({ children }) => {
   return (
     <div className="relative min-h-screen">
-      <nav className="z-10 absolute flex justify-end items-start w-full px-8 py-8 my-0 md:pt-8 md:px-16 mx-auto">
+      <nav className="z-50 absolute flex justify-end items-start w-full px-4 py-4 my-0 md:pt-8 md:px-16 mx-auto">
         <div>
           <ChangeLang
             generalClasses="p-1 sm:p-2 lowercase"
