@@ -12,6 +12,7 @@
     "next": "latest",
     "next-translate": "^1.0.2",
     "postcss": "^8.1.10",
+    "postcss-caralho": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tailwindcss": "^2.0.2"
