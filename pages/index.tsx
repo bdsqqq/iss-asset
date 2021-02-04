@@ -68,7 +68,9 @@ export default function Home() {
           bold: "03",
           thin: "Wheres the iss?",
         }}
-      ></Band>
+      >
+        <MapWrapper />
+      </Band>
     </Container>
   );
 }
@@ -76,4 +78,5 @@ export default function Home() {
 import Container from "../components/Container";
 import Band from "../components/Band";
 import B from "../components/Bold";
+import MapWrapper from "../components/MapStuff/MapWrapper";
 import Image from "next/image";
