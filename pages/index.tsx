@@ -64,6 +64,7 @@ export default function Home() {
         </p>
       </Band>
       <Band
+        dark
         headline={{
           bold: "03",
           thin: "Wheres the iss?",
