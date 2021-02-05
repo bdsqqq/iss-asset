@@ -6,6 +6,9 @@ module.exports = {
       height: {
         "75vh": "75vh",
       },
+      maxWidth: {
+        32: "8rem",
+      },
     },
   },
   variants: {
