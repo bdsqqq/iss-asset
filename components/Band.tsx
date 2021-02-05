@@ -19,6 +19,7 @@ interface BandWithGrid extends BandPropsBasic {
   headline: {
     bold: string;
     thin: string;
+    additional?: React.ReactNode;
   };
   gridless?: never;
   id?: never;
@@ -60,11 +61,16 @@ const Band: React.FC<BandProps> = ({
         >
           {!gridless ? (
             <>
-              <h2 className="mb-12 md:col-span-1">
-                <span className="font-bold">{headline?.bold}</span>
-                <br />
-                <span className="font-extralight">{headline?.thin}</span>
-              </h2>
+              <div className="mb-12 md:col-span-1">
+                <h2>
+                  <span className="font-bold">{headline?.bold}</span>
+                  <br />
+                  <div className="font-extralight max-w-32">
+                    {headline?.thin}
+                  </div>
+                </h2>
+                <div>{headline?.additional}</div>
+              </div>
               <div className="md:col-span-3">{children}</div>
             </>
           ) : (
