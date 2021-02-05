@@ -8,31 +8,45 @@ const geoUrl =
 
 const MapChart: React.FC<MapChartProps> = ({ lon, lat }) => {
   return (
-    <ComposableMap projectionConfig={{ scale: 147 }}>
-      <Graticule stroke="#d0d0d0" />
-      <Geographies geography={geoUrl}>
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography key={geo.rsmKey} geography={geo} />
-          ))
-        }
-      </Geographies>
+    <>
       {lat && lon && (
-        <Marker coordinates={[lon, lat]}>
-          <g
-            className="text-red-500 stroke-current"
-            fill="none"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            transform="translate(-24, -48) scale(2)"
+        <ComposableMap
+          projection="geoAzimuthalEqualArea"
+          projectionConfig={{
+            scale: 300,
+            rotate: [-lon, -lat, 0],
+          }}
+        >
+          <Graticule className="stroke-current text-gray-600" />
+          <Geographies
+            className="fill-current text-gray-700"
+            geography={geoUrl}
+            stroke="#FFFFFF"
+            strokeWidth={0.5}
           >
-            <circle cx="12" cy="10" r="3" />
-            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-          </g>
-        </Marker>
+            {({ geographies }) =>
+              geographies.map((geo) => (
+                <Geography key={geo.rsmKey} geography={geo} />
+              ))
+            }
+          </Geographies>
+
+          <Marker coordinates={[lon, lat]}>
+            <g
+              className="text-red-500 stroke-current"
+              fill="none"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              transform="translate(-24, -48) scale(2)"
+            >
+              <circle cx="12" cy="10" r="3" />
+              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+            </g>
+          </Marker>
+        </ComposableMap>
       )}
-    </ComposableMap>
+    </>
   );
 };
 
