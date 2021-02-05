@@ -1,6 +1,6 @@
 interface MapChartProps {
-  lat: number;
-  lon: number;
+  lat?: number;
+  lon?: number;
 }
 
 const geoUrl =
@@ -17,9 +17,21 @@ const MapChart: React.FC<MapChartProps> = ({ lon, lat }) => {
           ))
         }
       </Geographies>
-      <Marker coordinates={[lon, lat]}>
-        <circle r={8} fill="#F53" />
-      </Marker>
+      {lat && lon && (
+        <Marker coordinates={[lon, lat]}>
+          <g
+            className="text-red-500 stroke-current"
+            fill="none"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            transform="translate(-24, -48) scale(2)"
+          >
+            <circle cx="12" cy="10" r="3" />
+            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+          </g>
+        </Marker>
+      )}
     </ComposableMap>
   );
 };
