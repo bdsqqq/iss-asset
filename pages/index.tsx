@@ -119,5 +119,5 @@ export default function Home() {
 import Container from "../components/Container";
 import Band from "../components/Band";
 import B from "../components/Bold";
-import MapWrapper from "../components/MapStuff/MapWrapper";
+import MapWrapper from "../components/mapStuff/MapWrapper";
 import Image from "next/image";
