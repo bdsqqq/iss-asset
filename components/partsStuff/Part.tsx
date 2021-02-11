@@ -27,6 +27,7 @@ const Part: React.FC<PartProp> = ({
       ) : (
         <>
           <br />
+          <br />
         </>
       )}
       <br />
