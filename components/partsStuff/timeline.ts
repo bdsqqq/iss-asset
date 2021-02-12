@@ -78,6 +78,54 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "Nov",
+        longName: "November",
+        parts: [
+          {
+            name: "P6 Truss",
+            nationality: "American",
+            description:
+              "The first part of the Integrated truss structure was temporarely mounted to the top of the z1 truss. This includes the first solar array wings, which provided the much needed power to the growing station. Radiator pannels were also added help remove excess heat from the station.",
+          },
+          {
+            name: "Humans!",
+            description:
+              "At this point, there was enough functionality that astronauts can start living aboard the station, instead of just temporary visits. From November 2000 until now, there has been a continuous human presence on board the station.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2001",
+    months: [
+      {
+        name: "Feb",
+        longName: "February",
+        parts: [
+          {
+            name: "Destiny",
+            nationality: "American",
+            role: "US Laboratory",
+            description:
+              "This is a place where a lot of scientific research happens.",
+          },
+        ],
+      },
+      {
+        name: "Mar",
+        longName: "March",
+        parts: [
+          {
+            name: "ESP 1",
+            nationality: "American",
+            role: "External Stowage Platform",
+            description:
+              "This is a place to store spare parts for the station.",
+          },
+        ],
+      },
     ],
   },
 ];
