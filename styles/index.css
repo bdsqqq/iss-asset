@@ -17,5 +17,9 @@
     .t-writing-mode-reset {
       writing-mode: horizontal-tb;
     }
+    .break-hiphen {
+      word-break: all;
+      hyphens: auto;
+    }
   }
 }
