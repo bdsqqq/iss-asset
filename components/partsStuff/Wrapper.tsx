@@ -15,7 +15,7 @@ const Wrapper = () => {
                 <div className="flex mr-2">
                   <p
                     id={year.yearNumber + "_" + month.name}
-                    className="t-writing-mode-vlr mt-4"
+                    className="t-writing-mode-vlr mt-14"
                   >
                     — {month.name}
                   </p>
