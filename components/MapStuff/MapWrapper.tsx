@@ -20,7 +20,7 @@ export default function MapWrapper() {
 
   return (
     <div>
-      <MapChart lon={lon} lat={lat} />
+      <Chart lon={lon} lat={lat} />
       {lat && lon && (
         <>
           <button onClick={() => setLat(lat + 10)}>+10Lat</button>
@@ -44,6 +44,6 @@ export default function MapWrapper() {
 
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import MapChart from "./MapChart";
+import Chart from "./Chart";
 
 import B from "../Bold";

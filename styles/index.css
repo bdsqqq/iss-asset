@@ -11,5 +11,15 @@
     .p-24-caralho {
       padding: 6rem !caralho;
     }
+    .t-writing-mode-vlr {
+      writing-mode: vertical-lr;
+    }
+    .t-writing-mode-reset {
+      writing-mode: horizontal-tb;
+    }
+    .break-hiphen {
+      word-break: all;
+      hyphens: auto;
+    }
   }
 }

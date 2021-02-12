@@ -1,5 +1,6 @@
 interface BandPropsBasic {
   dark?: boolean;
+  padless?: boolean;
   cta?:
     | {
         external?: boolean;
@@ -35,6 +36,7 @@ type BandProps = BandWithGrid | BandGridless;
 
 const Band: React.FC<BandProps> = ({
   dark,
+  padless,
   gridless,
   id,
   headline,
@@ -55,7 +57,7 @@ const Band: React.FC<BandProps> = ({
         ${dark ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"}`}
       >
         <div
-          className={`max-w-6xl mx-auto px-8 md:px-16 
+          className={`max-w-6xl mx-auto ${!padless && "px-8 md:px-16"} 
             ${!gridless && "md:grid grid-cols-4"}
         `}
         >

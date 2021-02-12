@@ -1,4 +1,4 @@
-interface MapChartProps {
+interface ChartProps {
   lat?: number;
   lon?: number;
 }
@@ -6,7 +6,7 @@ interface MapChartProps {
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const MapChart: React.FC<MapChartProps> = ({ lon, lat }) => {
+const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
   return (
     <>
       {lat && lon && (
@@ -50,7 +50,7 @@ const MapChart: React.FC<MapChartProps> = ({ lon, lat }) => {
   );
 };
 
-export default MapChart;
+export default Chart;
 
 import {
   ComposableMap,

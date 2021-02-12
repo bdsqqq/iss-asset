@@ -75,20 +75,9 @@ export default function Home() {
           <br /> <br />
           the whole construction took a bit over a decade before its completion.
         </p>
-        <div className="w-full h-84 my-8 bg-gray-800 font-mono leading-snug p-4 rounded-lg">
-          <B>Staging only:</B>
-          <br />
-          accordeon will go here option 1
-        </div>
       </Band>
-      <Band dark gridless id="accordeon">
-        <div className="w-full h-96 bg-gray-800  p-16 rounded-lg">
-          <span className="font-mono leading-snug">
-            <B>Staging only:</B>
-            <br />
-            accordeon will go here option 2
-          </span>
-        </div>
+      <Band dark padless gridless id="timeline">
+        <Wrapper />
       </Band>
       <Band
         dark
@@ -119,5 +108,6 @@ export default function Home() {
 import Container from "../components/Container";
 import Band from "../components/Band";
 import B from "../components/Bold";
+import Wrapper from "../components/partsStuff/Wrapper";
 import MapWrapper from "../components/MapStuff/MapWrapper";
 import Image from "next/image";
