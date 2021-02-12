@@ -3,7 +3,7 @@ const Wrapper = () => {
     <div className="flex overflow-x-auto">
       {timeline.map((year, i) => {
         return (
-          <article className="flex md:p-4">
+          <article key={`part-${i}`} className="flex md:p-4">
             <header
               id={year.yearNumber}
               className="t-writing-mode-vlr font-light text-4xl"
@@ -12,7 +12,7 @@ const Wrapper = () => {
             </header>
             {year.months.map((month, j) => {
               return (
-                <div className="flex mr-2">
+                <div key={`month-${i}-${j}`} className="flex mr-2">
                   <p
                     id={year.yearNumber + "_" + month.name}
                     className="t-writing-mode-vlr mt-14"
