@@ -76,7 +76,7 @@ export default function Home() {
           the whole construction took a bit over a decade before its completion.
         </p>
       </Band>
-      <Band dark gridless id="timeline">
+      <Band dark padless gridless id="timeline">
         <Wrapper />
       </Band>
       <Band
