@@ -1,18 +1,11 @@
 interface PartProp {
-  key: string;
   name: string;
   nationality?: string;
   role?: string;
   description: string;
 }
 
-const Part: React.FC<PartProp> = ({
-  key,
-  name,
-  nationality,
-  role,
-  description,
-}) => {
+const Part: React.FC<PartProp> = ({ name, nationality, role, description }) => {
   return (
     <div className="w-48" key={key}>
       <p className="text-center font-bold text-2xl">{name}</p>
