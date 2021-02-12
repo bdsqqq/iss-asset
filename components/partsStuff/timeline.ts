@@ -38,7 +38,7 @@ const timeline: Year[] = [
             nationality: "American",
             role: "Node 1",
             description:
-              "it has six docking ports to connect to other modules and it connects to Zarya using a special piece called PMA(pressurized Mating Adapter). Unity was launched with PMA-1 and PMA-2.",
+              "it has six docking ports to connect to other modules and it connects to Zarya using a special piece called PMA (pressurized Mating Adapter). Unity was launched with PMA-1 and PMA-2.",
           },
         ],
       },
