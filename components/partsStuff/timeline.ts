@@ -126,6 +126,18 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "Apr",
+        longName: "April",
+        parts: [
+          {
+            name: "Canadarm2",
+            nationality: "Canadian",
+            description:
+              "It's a robotic arm that can help around the outside of the station. It's usually controlled by an astronaut who's on the inside of the station. Either end of the arm can be attached to one of the grapple fixtures that you'll find on various modules.",
+          },
+        ],
+      },
     ],
   },
 ];

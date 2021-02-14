@@ -53,7 +53,7 @@ const Band: React.FC<BandProps> = ({
     <>
       <section
         id={bandId.replace(/\s+/g, "-").toLowerCase()}
-        className={`relative w-full py-16
+        className={`relative w-full ${!padless && "py-16"} 
         ${dark ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"}`}
       >
         <div
