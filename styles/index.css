@@ -21,5 +21,15 @@
       word-break: all;
       hyphens: auto;
     }
+    .dragHandle {
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+    }
+    .dragHandle:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
   }
 }
