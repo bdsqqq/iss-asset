@@ -1,5 +1,7 @@
 const API_URL = "https://api.wheretheiss.at/v1/satellites/25544";
 
+const Chart = dynamic(() => import("./Chart"), { loading: () => <p>...</p> });
+
 export default function MapWrapper() {
   const { data, error } = useSWR(API_URL, {
     revalidateOnFocus: true,
@@ -23,6 +25,6 @@ export default function MapWrapper() {
 
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import Chart from "./Chart";
+//import Chart from "./Chart";
 
-import B from "../Bold";
+import dynamic from "next/dynamic";
