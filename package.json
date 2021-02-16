@@ -11,6 +11,7 @@
     "autoprefixer": "^10.0.4",
     "framer-motion": "^3.3.0",
     "next": "latest",
+    "next-seo": "^4.19.0",
     "next-translate": "^1.0.2",
     "postcss": "^8.1.10",
     "postcss-caralho": "^2.6.0",
