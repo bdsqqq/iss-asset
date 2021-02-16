@@ -138,6 +138,19 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "Jul",
+        longName: "July",
+        parts: [
+          {
+            name: "Quest",
+            role: "joint airlock",
+            nationality: "American",
+            description:
+              "allows the astronauts to safely step outside for a few hours to perform an EVA, also known as a spacewalk.",
+          },
+        ],
+      },
     ],
   },
 ];

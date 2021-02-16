@@ -14,6 +14,7 @@ const Wrapper = () => {
       y: 0,
       opacity: 0.8,
       transition: {
+        duration: 0.1,
         delay: 2,
       },
     },
@@ -39,10 +40,11 @@ const Wrapper = () => {
           left: -draggableWidth - 20,
         }}
         dragElastic={0.03}
-        onDragStart={(e) => {
+        dragMomentum={false}
+        onDragStart={() => {
           setToolTipShouldAppear(false);
         }}
-        onDragEnd={(e) => {
+        onDragEnd={() => {
           setToolTipShouldAppear(true);
         }}
         className="flex dragHandle"
