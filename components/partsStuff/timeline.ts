@@ -151,6 +151,149 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "Sep",
+        longName: "September",
+        parts: [
+          {
+            name: "Pirs",
+            nationality: "Russian",
+            role: "Docking Compartment 1 (DC-1)",
+            description:
+              "It can be used as an airlock for spacewalks or as a docking port to allow visiting spacecraft to attach to the station.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2002",
+    months: [
+      {
+        name: "Apr",
+        longName: "April",
+        parts: [
+          {
+            name: "S0 Truss",
+            nationality: "American",
+            role: "",
+            description:
+              "It's time to start building the integrated truss structure. the first piece get's attached to the top of the Destiny module.",
+          },
+        ],
+      },
+      {
+        name: "Jun",
+        longName: "June",
+        parts: [
+          {
+            name: "MBS",
+            nationality: "Canadian",
+            role: "Mobile remote servicer Base System",
+            description:
+              "This platform can move along the truss. It's especially useful when the Canadarm2 is attached.",
+          },
+        ],
+      },
+      {
+        name: "Nov",
+        longName: "November",
+        parts: [
+          {
+            name: "S1 Truss and P1 Truss",
+            nationality: "American",
+            role: "",
+            description:
+              "The S stands for starboard and the P stands for port. This way, you know on which side of the station it's on. Each side has room for three more radiator panels, but for now, only the center ones will be installed.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2005",
+    months: [
+      {
+        name: "Jul",
+        longName: "July",
+        parts: [
+          {
+            name: "ESP-2",
+            nationality: "American",
+            role: "External Stowage Platform",
+            description:
+              "This is a place to store spare parts for the station.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2006",
+    months: [
+      {
+        name: "Sep",
+        longName: "September",
+        parts: [
+          {
+            name: "P3, P4 and P5 Truss",
+            nationality: "American",
+            role: "",
+            description: "with solar arrays and another radiator panel.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2007",
+    months: [
+      {
+        name: "Aug",
+        longName: "August",
+        parts: [
+          {
+            name: "S3, S4 and S5 Truss",
+            nationality: "American",
+            role: "",
+            description: "with solar arrays and another radiator panel.",
+          },
+          {
+            name: "ESP-3",
+            nationality: "American",
+            role: "External Stowage Platform",
+            description:
+              "This is a place to store spare parts for the station.",
+          },
+        ],
+      },
+      {
+        name: "Oct",
+        longName: "October",
+        parts: [
+          {
+            name: "P6 Truss",
+            nationality: "American",
+            role: "",
+            description:
+              "This was not an addition, but ratter a move. The p6 Truss was resting on top of the z1 truss since 2000 and now it could finally be moved to its final resting place.",
+          },
+          {
+            name: "Radiator panels",
+            nationality: "",
+            role: "",
+            description:
+              "It's time to add a few radiator pannels to the S1 and P1 Truss.",
+          },
+          {
+            name: "Harmony ",
+            nationality: "American",
+            role: "Node 2",
+            description:
+              "has six docking ports which will allow for further expansion of the station.",
+          },
+        ],
+      },
     ],
   },
 ];
