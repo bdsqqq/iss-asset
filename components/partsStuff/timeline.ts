@@ -296,6 +296,24 @@ const timeline: Year[] = [
       },
     ],
   },
+  {
+    yearNumber: "2008",
+    months: [
+      {
+        name: "Feb ",
+        longName: "February",
+        parts: [
+          {
+            name: "Columbus ",
+            nationality: "European",
+            role: "Laboratory",
+            description:
+              "Is the largest single contribution to the ISS made by the European Space Agency (ESA).",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default timeline;
