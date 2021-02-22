@@ -312,6 +312,19 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "Mar",
+        longName: "March",
+        parts: [
+          {
+            name: "Dextre",
+            nationality: "Canadian",
+            role: "Special Purpose Dexterous Manipulator",
+            description:
+              "It can attach to the same grapple fixtures that are used by the Canadarm2. In fact, Dextre is most useful when it's attached to the end of the Canadarm2.",
+          },
+        ],
+      },
     ],
   },
 ];
