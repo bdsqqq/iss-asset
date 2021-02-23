@@ -325,6 +325,19 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "May",
+        longName: "May",
+        parts: [
+          {
+            name: "Kibo ",
+            nationality: "Japanese",
+            role: "Experiment Module",
+            description:
+              "It came up to the station in several pieces. It even has its own robotic arm.",
+          },
+        ],
+      },
     ],
   },
 ];
