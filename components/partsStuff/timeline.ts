@@ -13,15 +13,15 @@ interface Year {
 }
 
 export default function Timeline() {
-  const { t } = useTranslation("months");
+  const { t } = useTranslation("parts");
 
   const timeline: Year[] = [
     {
       yearNumber: "1998",
       months: [
         {
-          name: t("11short"),
-          longName: "November",
+          name: t("months:11short"),
+          longName: t("months:11long"),
           parts: [
             {
               name: "Zarya",
@@ -33,8 +33,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Dec",
-          longName: "December",
+          name: t("months:12short"),
+          longName: t("months:12long"),
           parts: [
             {
               name: "Unity",
@@ -51,8 +51,8 @@ export default function Timeline() {
       yearNumber: "2000",
       months: [
         {
-          name: "Jul",
-          longName: "July",
+          name: t("months:07short"),
+          longName: t("months:07long"),
           parts: [
             {
               name: "Zvezda",
@@ -64,8 +64,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Oct",
-          longName: "October",
+          name: t("months:10short"),
+          longName: t("months:10long"),
           parts: [
             {
               name: "Z1 Truss",
@@ -82,8 +82,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: t("11short"),
-          longName: "November",
+          name: t("months:11short"),
+          longName: t("months:11long"),
           parts: [
             {
               name: "P6 Truss",
@@ -104,8 +104,8 @@ export default function Timeline() {
       yearNumber: "2001",
       months: [
         {
-          name: "Feb",
-          longName: "February",
+          name: t("months:02short"),
+          longName: t("months:02long"),
           parts: [
             {
               name: "Destiny",
@@ -117,8 +117,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Mar",
-          longName: "March",
+          name: t("months:03short"),
+          longName: t("months:03long"),
           parts: [
             {
               name: "ESP 1",
@@ -130,8 +130,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Apr",
-          longName: "April",
+          name: t("months:04short"),
+          longName: t("months:04long"),
           parts: [
             {
               name: "Canadarm2",
@@ -142,8 +142,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Jul",
-          longName: "July",
+          name: t("months:07short"),
+          longName: t("months:07long"),
           parts: [
             {
               name: "Quest",
@@ -155,8 +155,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Sep",
-          longName: "September",
+          name: t("months:09short"),
+          longName: t("months:09long"),
           parts: [
             {
               name: "Pirs",
@@ -173,8 +173,8 @@ export default function Timeline() {
       yearNumber: "2002",
       months: [
         {
-          name: "Apr",
-          longName: "April",
+          name: t("months:04short"),
+          longName: t("months:04long"),
           parts: [
             {
               name: "S0 Truss",
@@ -186,8 +186,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Jun",
-          longName: "June",
+          name: t("months:06short"),
+          longName: t("months:06long"),
           parts: [
             {
               name: "MBS",
@@ -199,8 +199,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: t("11short"),
-          longName: "November",
+          name: t("months:11short"),
+          longName: t("months:11long"),
           parts: [
             {
               name: "S1 Truss, P1 Truss",
@@ -217,8 +217,8 @@ export default function Timeline() {
       yearNumber: "2005",
       months: [
         {
-          name: "Jul",
-          longName: "July",
+          name: t("months:07short"),
+          longName: t("months:07long"),
           parts: [
             {
               name: "ESP-2",
@@ -235,8 +235,8 @@ export default function Timeline() {
       yearNumber: "2006",
       months: [
         {
-          name: "Sep",
-          longName: "September",
+          name: t("months:09short"),
+          longName: t("months:09long"),
           parts: [
             {
               name: "P3, P4, P5 Truss",
@@ -252,8 +252,8 @@ export default function Timeline() {
       yearNumber: "2007",
       months: [
         {
-          name: "Aug",
-          longName: "August",
+          name: t("months:08short"),
+          longName: t("months:08long"),
           parts: [
             {
               name: "S3, S4, S5 Truss",
@@ -271,8 +271,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Oct",
-          longName: "October",
+          name: t("months:10short"),
+          longName: t("months:10long"),
           parts: [
             {
               name: "P6 Truss",
@@ -304,7 +304,7 @@ export default function Timeline() {
       months: [
         {
           name: "Feb ",
-          longName: "February",
+          longName: t("months:02long"),
           parts: [
             {
               name: "Columbus ",
@@ -316,8 +316,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Mar",
-          longName: "March",
+          name: t("months:03short"),
+          longName: t("months:03long"),
           parts: [
             {
               name: "Dextre",
@@ -329,8 +329,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "May",
-          longName: "May",
+          name: t("months:05short"),
+          longName: t("months:05long"),
           parts: [
             {
               name: "Kibo ",
@@ -347,8 +347,8 @@ export default function Timeline() {
       yearNumber: "2009",
       months: [
         {
-          name: "Mar",
-          longName: "March",
+          name: t("months:03short"),
+          longName: t("months:03long"),
           parts: [
             {
               name: "S6 Truss",
@@ -359,8 +359,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "Jul",
-          longName: "July",
+          name: t("months:07short"),
+          longName: t("months:07long"),
           parts: [
             {
               name: "Exposed Facility",
@@ -372,8 +372,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: t("11short"),
-          longName: "November",
+          name: t("months:11short"),
+          longName: t("months:11long"),
           parts: [
             {
               name: "Poisk",
@@ -397,8 +397,8 @@ export default function Timeline() {
       yearNumber: "2010",
       months: [
         {
-          name: "Feb",
-          longName: "February",
+          name: t("months:02short"),
+          longName: t("months:02long"),
           parts: [
             {
               name: "Tranquility",
@@ -435,7 +435,7 @@ export default function Timeline() {
       months: [
         {
           name: "Feb ",
-          longName: "February",
+          longName: t("months:02long"),
           parts: [
             {
               name: "Leonardo ",
@@ -473,7 +473,7 @@ export default function Timeline() {
       months: [
         {
           name: "Apr ",
-          longName: "April",
+          longName: t("months:04long"),
           parts: [
             {
               name: "BEAM ",
