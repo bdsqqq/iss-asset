@@ -138,9 +138,10 @@ const PageHead = () => {
   );
 };
 import { NextSeo } from "next-seo";
+import Image from "next/image";
+
 import Container from "../components/Container";
 import Band from "../components/Band";
 import B from "../components/Bold";
 import Wrapper from "../components/partsStuff/Wrapper";
 import MapWrapper from "../components/MapStuff/MapWrapper";
-import Image from "next/image";

@@ -2,6 +2,7 @@
     "locales": ["en", "pt"],
     "defaultLocale": "en",
     "pages": {
-        "*": ["common"]
+        "*": ["common"],
+        "/": ["parts", "months"]
     }
 }

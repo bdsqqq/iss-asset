@@ -1,0 +1,37 @@
+{
+    "01short":"Jan",
+    "01long":"Janeiro",
+
+    "02short":"Fev",
+    "02long":"Fevereiro",
+
+    "03short":"Mar",
+    "03long":"Março",
+
+    "04short":"Abr",
+    "04long":"Abril",
+    
+    "05short":"Mai",
+    "05long":"Maio",
+    
+    "06short":"Jun",
+    "06long":"Junho",
+    
+    "07short":"Jul",
+    "07long":"Julho",
+    
+    "08short":"Ago",
+    "08long":"Agosto",
+    
+    "09short":"Set",
+    "09long":"Setembro",
+    
+    "10short":"Out",
+    "10long":"Outubro",
+    
+    "11short":"Nov",
+    "11long":"Novembro",
+    
+    "12short":"Dez",
+    "12long":"Dezembro"
+}
