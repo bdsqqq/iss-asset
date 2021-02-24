@@ -200,7 +200,7 @@ const timeline: Year[] = [
         longName: "November",
         parts: [
           {
-            name: "S1 Truss and P1 Truss",
+            name: "S1 Truss, P1 Truss",
             nationality: "American",
             role: "",
             description:
@@ -236,7 +236,7 @@ const timeline: Year[] = [
         longName: "September",
         parts: [
           {
-            name: "P3, P4 and P5 Truss",
+            name: "P3, P4, P5 Truss",
             nationality: "American",
             role: "",
             description: "with solar arrays and another radiator panel.",
@@ -253,7 +253,7 @@ const timeline: Year[] = [
         longName: "August",
         parts: [
           {
-            name: "S3, S4 and S5 Truss",
+            name: "S3, S4, S5 Truss",
             nationality: "American",
             role: "",
             description: "with solar arrays and another radiator panel.",
@@ -380,7 +380,7 @@ const timeline: Year[] = [
               "Very similar to Pirs, It was another place for Russian spacecraft to dock.",
           },
           {
-            name: "ELC-1 and ELC-2",
+            name: "ELC-1, ELC-2",
             nationality: "American",
             role: "Express Logistics Carrier",
             description:
@@ -448,7 +448,7 @@ const timeline: Year[] = [
         longName: "May ",
         parts: [
           {
-            name: "ELC-3 and ELC-4",
+            name: "ELC-3, ELC-4",
             nationality: "American",
             role: "Express Logistics Carrier",
             description:
