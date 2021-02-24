@@ -41,7 +41,6 @@ const Wrapper = () => {
           left: -draggableWidth - 20,
         }}
         dragElastic={0.03}
-        dragMomentum={false}
         onDragStart={() => {
           setToolTipShouldAppear(false);
         }}
