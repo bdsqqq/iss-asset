@@ -303,7 +303,7 @@ export default function Timeline() {
       yearNumber: "2008",
       months: [
         {
-          name: "Feb ",
+          name: t("months:02short"),
           longName: t("months:02long"),
           parts: [
             {
@@ -416,8 +416,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "May ",
-          longName: "May ",
+          name: t("months:05short"),
+          longName: t("months:05long"),
           parts: [
             {
               name: "Rassvet ",
@@ -447,8 +447,8 @@ export default function Timeline() {
           ],
         },
         {
-          name: "May ",
-          longName: "May ",
+          name: t("months:05short"),
+          longName: t("months:05long"),
           parts: [
             {
               name: "ELC-3, ELC-4",
@@ -472,7 +472,7 @@ export default function Timeline() {
       yearNumber: "2016",
       months: [
         {
-          name: "Apr ",
+          name: t("months:04short"),
           longName: t("months:04long"),
           parts: [
             {
