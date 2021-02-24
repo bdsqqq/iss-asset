@@ -200,7 +200,7 @@ const timeline: Year[] = [
         longName: "November",
         parts: [
           {
-            name: "S1 Truss and P1 Truss",
+            name: "S1 Truss, P1 Truss",
             nationality: "American",
             role: "",
             description:
@@ -236,7 +236,7 @@ const timeline: Year[] = [
         longName: "September",
         parts: [
           {
-            name: "P3, P4 and P5 Truss",
+            name: "P3, P4, P5 Truss",
             nationality: "American",
             role: "",
             description: "with solar arrays and another radiator panel.",
@@ -253,7 +253,7 @@ const timeline: Year[] = [
         longName: "August",
         parts: [
           {
-            name: "S3, S4 and S5 Truss",
+            name: "S3, S4, S5 Truss",
             nationality: "American",
             role: "",
             description: "with solar arrays and another radiator panel.",
@@ -312,15 +312,177 @@ const timeline: Year[] = [
           },
         ],
       },
+      {
+        name: "Mar",
+        longName: "March",
+        parts: [
+          {
+            name: "Dextre",
+            nationality: "Canadian",
+            role: "Special Purpose Dexterous Manipulator",
+            description:
+              "It can attach to the same grapple fixtures that are used by the Canadarm2. In fact, Dextre is most useful when it's attached to the end of the Canadarm2.",
+          },
+        ],
+      },
+      {
+        name: "May",
+        longName: "May",
+        parts: [
+          {
+            name: "Kibo ",
+            nationality: "Japanese",
+            role: "Experiment Module",
+            description:
+              "It came up to the station in several pieces. It even has its own robotic arm.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2009",
+    months: [
+      {
+        name: "Mar",
+        longName: "March",
+        parts: [
+          {
+            name: "S6 Truss",
+            nationality: "American",
+            role: "",
+            description: "the last of the truss segments.",
+          },
+        ],
+      },
+      {
+        name: "Jul",
+        longName: "July",
+        parts: [
+          {
+            name: "Exposed Facility",
+            nationality: "Japanese",
+            role: "",
+            description:
+              "This allows research to be conducted in the vacuum of space.",
+          },
+        ],
+      },
+      {
+        name: "Nov",
+        longName: "November",
+        parts: [
+          {
+            name: "Poisk",
+            nationality: "Russian",
+            role: "",
+            description:
+              "Very similar to Pirs, It was another place for Russian spacecraft to dock.",
+          },
+          {
+            name: "ELC-1, ELC-2",
+            nationality: "American",
+            role: "Express Logistics Carrier",
+            description:
+              "These are places to store hardware to help the station work correctly.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2010",
+    months: [
+      {
+        name: "Feb",
+        longName: "February",
+        parts: [
+          {
+            name: "Tranquility",
+            nationality: "American",
+            role: "Node 3",
+            description: "is added to the side of Unity.",
+          },
+          {
+            name: "Cupola",
+            nationality: "American",
+            role: "Node 3",
+            description:
+              "Attached to the bottom side of Tranquility, this is a small room with seven windows from which to see the view. Each window has a cover that can be closed when they are not in use.",
+          },
+        ],
+      },
+      {
+        name: "May ",
+        longName: "May ",
+        parts: [
+          {
+            name: "Rassvet ",
+            nationality: "Russian",
+            role: "Mini Research Module-1",
+            description:
+              "This is used for storage and as another docking port.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2011",
+    months: [
+      {
+        name: "Feb ",
+        longName: "February",
+        parts: [
+          {
+            name: "Leonardo ",
+            nationality: "American",
+            role: "Permanent Multipurpose Module",
+            description:
+              "is used for storage of supplies and waste. The trash will build up here until it can be removed from the station.",
+          },
+        ],
+      },
+      {
+        name: "May ",
+        longName: "May ",
+        parts: [
+          {
+            name: "ELC-3, ELC-4",
+            nationality: "American",
+            role: "Express Logistics Carrier",
+            description:
+              "These are places to store hardware to help the station work correctly.",
+          },
+          {
+            name: "AMS-02",
+            nationality: "American",
+            role: "Science experiment",
+            description:
+              "the Alpha Magnetic Spectrometer is used to study rare particles such as antimatter.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    yearNumber: "2016",
+    months: [
+      {
+        name: "Apr ",
+        longName: "April",
+        parts: [
+          {
+            name: "BEAM ",
+            nationality: "American",
+            role: "Technology experiment",
+            description:
+              "the Bigelow Expandable Activity Module, takes up a small amount of space during launch and then inflated once attached to the station. It is an experiment to see if this kind of technology can work.",
+          },
+        ],
+      },
     ],
   },
 ];
 
 export default timeline;
-
-/* Part
-name: "",
-nationality: "",
-role: "",
-description:"",
-*/
