@@ -1,4 +1,5 @@
 const Wrapper = () => {
+  const timelineArray = timeline();
   const draggableRef = useRef<any>();
   const [draggableWidth, setDragableWidth] = useState(0);
 
@@ -40,7 +41,6 @@ const Wrapper = () => {
           left: -draggableWidth - 20,
         }}
         dragElastic={0.03}
-        dragMomentum={false}
         onDragStart={() => {
           setToolTipShouldAppear(false);
         }}
@@ -49,7 +49,7 @@ const Wrapper = () => {
         }}
         className="flex dragHandle"
       >
-        {timeline.map((year, i) => {
+        {timelineArray.map((year, i) => {
           return (
             <article
               key={`part-${i}`}
