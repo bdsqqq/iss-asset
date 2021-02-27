@@ -3,6 +3,6 @@
     "defaultLocale": "en",
     "pages": {
         "*": ["common"],
-        "/": ["parts", "months"]
+        "/": ["home", "parts", "months"]
     }
 }

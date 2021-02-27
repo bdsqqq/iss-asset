@@ -1,4 +1,5 @@
 export default function Home() {
+  const { t } = useTranslation("home");
   return (
     <>
       <PageHead />
@@ -9,10 +10,10 @@ export default function Home() {
         >
           <div className="flex items-center justify-center w-full h-full absolute z-10">
             <h1 className="font-bold uppercase text-2xl md:text-4xl text-center">
-              <span className="text-lg md:text-xl">The ISS:</span> <br />
+              <span className="text-lg md:text-xl">{t("hero1")}</span> <br />
               <br />
-              One step closer to <br />{" "}
-              <span className="text-7xl md:text-8xl">infinity</span>
+              {t("hero2")} <br />{" "}
+              <span className="text-7xl md:text-8xl">{t("hero3")}</span>
             </h1>
           </div>
           <div className="h-full w-full my-0 mx-auto">
@@ -139,6 +140,7 @@ const PageHead = () => {
 };
 import { NextSeo } from "next-seo";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 import Container from "../components/Container";
 import Band from "../components/Band";
