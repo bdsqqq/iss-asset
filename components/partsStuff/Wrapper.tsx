@@ -1,4 +1,5 @@
 const Wrapper = () => {
+  const { t } = useTranslation("home");
   const timelineArray = timeline();
   const draggableRef = useRef<any>();
   const [draggableWidth, setDragableWidth] = useState(0);
@@ -32,7 +33,7 @@ const Wrapper = () => {
         animate={toolTipShouldAppear ? "showing" : "hidding"}
         className="ml-8 md:ml-12 mb-4 italic font-light"
       >
-        Discover the ISS Modules by dragging
+        {t("draggable-helper")}
       </motion.div>
       <motion.div
         drag="x"
@@ -100,6 +101,7 @@ export default Wrapper;
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
 
 import Part from "./Part";
 import timeline from "./timeline";
