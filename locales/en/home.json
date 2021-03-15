@@ -1,5 +1,7 @@
 {
     "hero1": "The ISS:",
     "hero2": "One step closer to",
-    "hero3": "infinity"
+    "hero3": "infinity",
+
+    "draggable-helper": "Discover the ISS Modules by dragging"
 }
