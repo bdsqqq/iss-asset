@@ -29,5 +29,3 @@ const Part: React.FC<PartProp> = ({ name, nationality, role, description }) => {
 };
 
 export default Part;
-
-import Image from "next/image";
