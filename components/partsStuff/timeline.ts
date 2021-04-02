@@ -203,7 +203,7 @@ export default function Timeline() {
           longName: t("months:11long"),
           parts: [
             {
-              name: "S1 Truss, P1 Truss",
+              name: "S1, P1 Truss",
               nationality: "American",
               role: "",
               description:
