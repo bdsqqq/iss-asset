@@ -10,6 +10,7 @@
   "dependencies": {
     "autoprefixer": "^10.0.4",
     "framer-motion": "^3.3.0",
+    "ioredis": "^4.27.1",
     "next": "latest",
     "next-seo": "^4.19.0",
     "next-translate": "^1.0.2",
@@ -22,6 +23,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "@types/ioredis": "^4.26.0",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.1",
     "@types/react-simple-maps": "^1.0.3",
