@@ -9,6 +9,9 @@ module.exports = {
       maxWidth: {
         32: "8rem",
       },
+      padding: {
+        "16/9": "56.25%",
+      },
     },
   },
   variants: {
