@@ -1,6 +1,8 @@
 const API_URL = `/api/issData`;
 
-const Chart = dynamic(() => import("./Chart"), { loading: () => <p>...</p> });
+const Chart = dynamic(() => import("./Chart"), {
+  loading: () => <></>,
+});
 
 export default function MapWrapper() {
   const { data } = useSWR(API_URL, {
