@@ -20,7 +20,11 @@ export default function MapWrapper() {
   const [lat, setLat] = useState<undefined | number>();
   const [lon, setLon] = useState<undefined | number>();
 
-  return <Chart lon={lon} lat={lat} />;
+  return (
+    <div className="relative w-full h-0 pb-16/9">
+      <Chart lon={lon} lat={lat} />
+    </div>
+  );
 }
 
 import { useEffect, useState } from "react";
