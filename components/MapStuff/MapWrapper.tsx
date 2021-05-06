@@ -1,4 +1,4 @@
-const API_URL = `${process.env.APP_URL}/api/issData`;
+const API_URL = `/api/issData`;
 
 const Chart = dynamic(() => import("./Chart"), { loading: () => <p>...</p> });
 
