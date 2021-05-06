@@ -1,11 +1,11 @@
-const API_URL = "https://api.wheretheiss.at/v1/satellites/25544";
+const API_URL = `${process.env.APP_URL}/api/issData`;
 
 const Chart = dynamic(() => import("./Chart"), { loading: () => <p>...</p> });
 
 export default function MapWrapper() {
   const { data, error } = useSWR(API_URL, {
     revalidateOnFocus: true,
-    refreshInterval: 12000,
+    refreshInterval: 3 * 1000,
   });
 
   useEffect(() => {
