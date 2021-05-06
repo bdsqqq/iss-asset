@@ -9,8 +9,6 @@ export default function MapWrapper() {
   });
 
   useEffect(() => {
-    data && console.table(data);
-    error && console.log(error, "error");
     if (data) {
       setLat(data.latitude);
       setLon(data.longitude);
