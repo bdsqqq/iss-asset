@@ -16,7 +16,7 @@ const getIssData = async (fetcher: any, API_URL: string) => {
   }
 
   let issData = await fetcher(API_URL);
-  redis.set(cacheKey, JSON.stringify(issData), "EX", 60);
+  redis.set(cacheKey, JSON.stringify(issData), "EX", 3);
 
   return { ...issData, source: "api" };
 };
