@@ -13,7 +13,7 @@ export default function MapWrapper() {
       setLat(data.latitude);
       setLon(data.longitude);
     }
-  }, [data, error]);
+  }, [data]);
 
   const [lat, setLat] = useState<undefined | number>();
   const [lon, setLon] = useState<undefined | number>();
