@@ -3,7 +3,7 @@ const API_URL = `/api/issData`;
 const Chart = dynamic(() => import("./Chart"), { loading: () => <p>...</p> });
 
 export default function MapWrapper() {
-  const { data, error } = useSWR(API_URL, {
+  const { data } = useSWR(API_URL, {
     revalidateOnFocus: true,
     refreshInterval: 3 * 1000,
   });
