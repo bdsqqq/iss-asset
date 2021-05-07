@@ -11,6 +11,7 @@ export default function Home() {
             thin: "Wheres the iss?",
           }}
         >
+          <div className="w-0 h-8 hidden md:block" />
           <MapWrapper />
         </Band>
         <Band
