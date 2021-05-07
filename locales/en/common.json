@@ -1,3 +1,6 @@
 {
-    "title": "something"
+    "switch": "Change to english",
+    "skip": "Skip to content",
+    "newTab": "Opens in a new tab",
+    "404": "Page Not Found"
 }
