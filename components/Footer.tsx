@@ -1,8 +1,29 @@
-export default function Footer() {
+interface FooterProps {
+  dark?: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({ dark }) => {
+  const { t } = usetranslation();
+  const linkClassList = `cursor-pointer text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition-all ${
+    dark ? "text-gray-100" : " text-gray-900"
+  }`;
+
   return (
-    <footer className="bg-gray-900 flex flex-col items-center py-8">
-      <div className="flex space-x-4 mb-4">
-        <ExternalLink href="https://github.com/bdsqqq">
+    <footer
+      className={`flex flex-col items-center py-8 ${
+        dark ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"
+      }
+      `}
+    >
+      <div className="mb-4">
+        Made with love by{" "}
+        <ExternalLink aClassList={linkClassList}>Igor Bedesqui</ExternalLink>
+      </div>
+      <div className="flex items-center space-x-4">
+        <ExternalLink
+          aClassList={linkClassList}
+          href="https://github.com/bdsqqq"
+        >
           <span className="sr-only">Github</span>
           <svg className="h-5 w-5" viewBox="0 0 24 24">
             <g
@@ -16,32 +37,12 @@ export default function Footer() {
             </g>
           </svg>
         </ExternalLink>
-        <ExternalLink href="mailto:igorbedesqui@gmail.com">
-          <span className="sr-only">Email</span>
-          <svg className="h-5 w-5" viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </g>
-          </svg>
-        </ExternalLink>
-      </div>
-      <div className="space-x-3">
-        <Link href="/example">
-          <a className="text-sm text-gray-100 text-opacity-70 hover:text-opacity-100 transition">
-            /example
-          </a>
-        </Link>
       </div>
     </footer>
   );
-}
+};
 
-import Link from "next/link";
+export default Footer;
+
 import ExternalLink from "./ExternalLink";
+import usetranslation from "next-translate/useTranslation";
