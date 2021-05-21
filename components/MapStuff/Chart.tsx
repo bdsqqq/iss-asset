@@ -11,6 +11,8 @@ const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
     <>
       {lat && lon && (
         <ComposableMap
+          width={800}
+          height={450}
           projection="geoAzimuthalEqualArea"
           projectionConfig={{
             scale: 300,

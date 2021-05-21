@@ -3,5 +3,14 @@
     "hero2": "Um passo mais perto do",
     "hero3": "Infinito",
 
-    "draggable-helper": "Descubra os modulos da ISS arrastando"
+    "draggable-helper": "Descubra os modulos da ISS arrastando",
+
+    "title": "Onde está a ISS? | Um passo mais perto do infinito",
+    "description": "Nascida da curiosidade humana, a ISS é a prova de que nem o céu é um limite para nós. Veja onde a ISS está agora mesmo!",
+    "ogAlt": "Vista da Estação Espacial Internacional",
+
+    "band01thin": "Onde está a ISS?",
+
+    "band02thin": "O que é a ISS?",
+    "band02Body": "Nascida da curiosidade humana,<b> a ISS</b> é o maior objeto feito pelo homem no espaço, e ainda assim é apenas o<b> primeiro passo</b>. <br></br><br></br> É nosso primeiro<b> laboratório em órbita</b>. <br></br> <br></br> É um<b> observatório permanente</b>. <br></br> <br></br> É o resultado do trabalho de centenas de milhares de humanos através da história. <br></br> <br></br> É a prova que<b> nem mesmo o céu é um limite para nós</b>. <br></br> <br></br> É um passo na nossa longa e incrível jornada <b> ao infinito, e além.</b>"
 }

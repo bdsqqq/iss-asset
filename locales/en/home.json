@@ -3,5 +3,14 @@
     "hero2": "One step closer to",
     "hero3": "infinity",
 
-    "draggable-helper": "Discover the ISS Modules by dragging"
+    "draggable-helper": "Discover the ISS Modules by dragging",
+
+    "title": "Where's the ISS? | One Step closer to Infinity",
+    "description": "Born from the human curiosity, the ISS is proof that not even the sky is a limit for us. See where the ISS is right now!",
+    "ogAlt": "View from the International Space Station",
+
+    "band01thin": "Where's the ISS?",
+
+    "band02thin": "What is the ISS?",
+    "band02Body": "Born from the human curiosity,<b> the ISS</b> is the biggest man-made object in space, yet it is only the <b> first step</b>. <br></br><br></br> It is our<b> first in-orbit laboratory</b>. <br></br> <br></br> It is<b> a permanent observatory</b>. <br></br> <br></br> It is the culmination of the work of hundreds of thousands of humans throughout history. <br></br> <br></br> It is proof that<b> not even the sky is a limit for us</b>. <br></br> <br></br> It is one step in our long and incredible journey <b> into the infinity and beyond.</b>"
 }
