@@ -63,7 +63,7 @@ const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
     site_name: "Where's the iss?",
     images: [
       {
-        url: `https://iss.igorbedesqui.com/images/og/ISS-${lang}.jpg`,
+        url: `https://iss.igorbedesqui.com/images/og/ISS_${lang}.jpg`,
         width: 1200,
         height: 627,
         alt: t("ogAlt"),
