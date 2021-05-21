@@ -68,7 +68,7 @@ const Band: React.FC<BandProps> = ({
                   {headline?.bold}
                 </span>
                 <div
-                  className={`inline-block md:w-12 font-light text-opacity-80 text-md text-2xl align-top break-normal ${
+                  className={`inline-block md:w-16 font-light text-opacity-80 text-md text-2xl align-top break-normal ${
                     dark ? "text-gray-100" : "text-gray-900"
                   }`}
                 >
