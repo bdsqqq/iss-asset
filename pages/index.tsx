@@ -1,8 +1,8 @@
 export default function Home() {
-  const { t } = useTranslation("home");
+  const { t, lang } = useTranslation("home");
   return (
     <>
-      <PageHead />
+      <PageHead t={t} lang={lang} />
       <Container>
         <Band
           dark
@@ -62,38 +62,69 @@ export default function Home() {
     </>
   );
 }
+interface SEOProps {
+  t: Translate;
+  lang: string;
+}
 
-const PageHead = () => {
+const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
+  const og: OpenGraph = {
+    type: "website",
+    url: `https://iss.igorbedesqui.com${lang != "en" ? "/" + lang : ""}`,
+    title: t("title"),
+    description: t("description"),
+    site_name: "Where's the iss?",
+    images: [
+      {
+        url: `https://iss.igorbedesqui.com/images/og/ISS-${lang}.jpg`,
+        width: 1200,
+        height: 627,
+        alt: t("ogAlt"),
+      },
+    ],
+  };
   return (
     <NextSeo
-      title="The ISS | One Step closer to Infinity"
-      description="Born from the human curiosity, the ISS It is proof that not even the sky is a limit for us. See how it was made and where it is right now!"
-      canonical="https://iss-asset.vercel.app/"
-      openGraph={{
-        url: "https://iss-asset.vercel.app/",
-        title: "The ISS | One Step closer to Infinity",
-        description:
-          "Born from the human curiosity, the ISS It is proof that not even the sky is a limit for us. See how it was made and where it is right now!",
-        images: [
-          {
-            url: "",
-            width: 800,
-            height: 600,
-            alt: "Og Image Alt",
-          },
-        ],
-      }}
+      title={t("title")}
+      description={t("description")}
+      openGraph={og}
       twitter={{
         handle: "@igorbdsq",
-        site: "@igorbdsq",
+        site: "@site",
         cardType: "summary_large_image",
       }}
+      languageAlternates={[
+        {
+          hrefLang: "pt",
+          href: `https://iss.igorbedesqui.com/pt`,
+        },
+        {
+          hrefLang: "en",
+          href: `https://iss.igorbedesqui.com`,
+        },
+        {
+          hrefLang: "x-default",
+          href: `https://iss.igorbedesqui.com`,
+        },
+      ]}
+      additionalMetaTags={[
+        {
+          property: "viewport",
+          content: "initial-scale=1.0, width=device-width",
+        },
+        {
+          httpEquiv: "x-ua-compatible",
+          content: "IE=edge; chrome=1",
+        },
+      ]}
     />
   );
 };
+
 import { NextSeo } from "next-seo";
-import Image from "next/image";
+import { OpenGraph } from "next-seo/lib/types";
 import useTranslation from "next-translate/useTranslation";
+import { Translate } from "next-translate";
 
 import Container from "../components/Container";
 import Band from "../components/Band";
