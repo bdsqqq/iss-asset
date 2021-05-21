@@ -3,7 +3,7 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ dark }) => {
-  const { t } = usetranslation();
+  const { t } = usetranslation("common");
   const linkClassList = `cursor-pointer text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition-all ${
     dark ? "text-gray-100" : " text-gray-900"
   }`;
@@ -16,13 +16,18 @@ const Footer: React.FC<FooterProps> = ({ dark }) => {
       `}
     >
       <div className="mb-4">
-        Made with love by{" "}
-        <ExternalLink aClassList={linkClassList}>Igor Bedesqui</ExternalLink>
+        {t("footerText")}
+        <ExternalLink
+          href="https://www.igorbedesqui.com"
+          aClassList={linkClassList}
+        >
+          Igor Bedesqui
+        </ExternalLink>
       </div>
       <div className="flex items-center space-x-4">
         <ExternalLink
           aClassList={linkClassList}
-          href="https://github.com/bdsqqq"
+          href="https://github.com/bdsqqq/iss-asset"
         >
           <span className="sr-only">Github</span>
           <svg className="h-5 w-5" viewBox="0 0 24 24">
