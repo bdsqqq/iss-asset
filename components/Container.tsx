@@ -8,9 +8,9 @@ const Container: React.FC = ({ children }) => {
       <nav className="z-50 absolute flex justify-end items-start w-full px-4 py-4 my-0 md:pt-8 md:px-16 mx-auto">
         <div>
           <ChangeLang
-            generalClasses="p-1 sm:p-2 lowercase"
-            activeClasses="font-bold text-gray-100"
-            inactiveClasses="text-gray-500"
+            generalClasses="p-1 sm:p-2 text-gray-100 lowercase"
+            activeClasses="font-bold"
+            inactiveClasses="text-gray-500 hover:text-gray-300 focus:text-gray-300"
           />
         </div>
       </nav>
