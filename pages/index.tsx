@@ -8,7 +8,7 @@ export default function Home() {
           dark
           headline={{
             bold: "01",
-            thin: "Wheres the iss?",
+            thin: t("band01thin"),
           }}
         >
           <div className="w-0 h-8 hidden md:block" />
@@ -17,24 +17,11 @@ export default function Home() {
         <Band
           headline={{
             bold: "02",
-            thin: "What is it?",
+            thin: t("band02thin"),
           }}
         >
           <p className="text-2xl leading-7 md:text-3xl md:leading-8">
-            Born from the human curiosity,<B> the ISS</B> is the biggest
-            man-made object in space, yet it is only the <B> first step</B>.
-            <br /> <br />
-            It is our<B> first in-orbit laboratory</B>.
-            <br /> <br />
-            It is<B> a permanent observatory</B>.
-            <br /> <br />
-            It is the culmination of the work of hundreds of thousands of humans
-            throughout history.
-            <br /> <br />
-            It is proof that<B> not even the sky is a limit for us</B>.
-            <br /> <br />
-            It is one step in our long and incredible journey
-            <B> into the infinity and beyond.</B>
+            <TransWithComps i18nKey="home:band02Body" />
           </p>
         </Band>
         {/*<Band
@@ -131,3 +118,4 @@ import Band from "../components/Band";
 import B from "../components/Bold";
 import Wrapper from "../components/partsStuff/Wrapper";
 import MapWrapper from "../components/MapStuff/MapWrapper";
+import TransWithComps from "../components/i18nStuff/TransWithComps";
