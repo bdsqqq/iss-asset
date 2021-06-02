@@ -7,7 +7,7 @@ const Chart = dynamic(() => import("./Chart"), {
 export default function MapWrapper() {
   const { data } = useSWR(API_URL, {
     revalidateOnFocus: true,
-    refreshInterval: 3 * 1000,
+    refreshInterval: 12 * 1000,
   });
 
   useEffect(() => {
