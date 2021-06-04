@@ -60,7 +60,7 @@ const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
     url: `https://iss.igorbedesqui.com${lang != "en" ? "/" + lang : ""}`,
     title: t("title"),
     description: t("description"),
-    site_name: "Where's the iss?",
+    site_name: t("siteName"),
     images: [
       {
         url: `https://iss.igorbedesqui.com/images/og/ISS_${lang}.jpg`,
