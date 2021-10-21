@@ -4,47 +4,11 @@ export default function Home() {
     <>
       <PageHead t={t} lang={lang} />
       <Container>
-        <Band
-          dark
-          headline={{
-            bold: "01",
-            thin: t("band01thin"),
-          }}
-        >
-          <div className="w-0 h-8 hidden md:block" />
-          <MapWrapper />
-        </Band>
-        <Band
-          headline={{
-            bold: "02",
-            thin: t("band02thin"),
-          }}
-        >
-          <p className="text-2xl leading-7 md:text-3xl md:leading-8">
-            <TransWithComps i18nKey="home:band02Body" />
-          </p>
-        </Band>
-        {/*<Band
-          dark
-          headline={{
-            bold: "03",
-            thin: "not your average lego set",
-          }}
-        >
-          <p className="text-2xl leading-7 md:text-3xl md:leading-8">
-            The different pieces of the Space Station were built in many
-            locations around the globe.
-            <br /> <br />
-            Each piece, called module, was then launched into space and
-            assembled there.
-            <br /> <br />
-            the whole construction took a bit over a decade before its
-            completion.
-          </p>
-        </Band>
-        <Band dark padless gridless id="timeline">
-          <Wrapper />
-        </Band>*/}
+        <div className="relative h-screen">
+          <div className="relative h-full overflow-hidden">
+            <MapWrapper />
+          </div>
+        </div>
       </Container>
     </>
   );
@@ -114,8 +78,4 @@ import useTranslation from "next-translate/useTranslation";
 import { Translate } from "next-translate";
 
 import Container from "../components/Container";
-import Band from "../components/Band";
-import B from "../components/Bold";
-import Wrapper from "../components/partsStuff/Wrapper";
 import MapWrapper from "../components/MapStuff/MapWrapper";
-import TransWithComps from "../components/i18nStuff/TransWithComps";

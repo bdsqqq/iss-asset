@@ -5,30 +5,24 @@ const Chart = dynamic(() => import("./Chart"), {
 });
 
 export default function MapWrapper() {
+  // Getting data
   const { data } = useSWR(API_URL, {
     revalidateOnFocus: true,
     refreshInterval: 12 * 1000,
   });
-
   useEffect(() => {
     if (data) {
       setLat(data.latitude);
       setLon(data.longitude);
     }
   }, [data]);
-
   const [lat, setLat] = useState<undefined | number>();
   const [lon, setLon] = useState<undefined | number>();
 
-  return (
-    <div className="relative w-full h-0 pb-16/9">
-      <Chart lon={lon} lat={lat} />
-    </div>
-  );
+  return <Chart lon={lon} lat={lat} />;
 }
 
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-//import Chart from "./Chart";
 
 import dynamic from "next/dynamic";
