@@ -3,9 +3,6 @@ interface ChartProps {
   lon?: number;
 }
 
-const geoUrl =
-  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
-
 const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
   return (
     <>
@@ -22,7 +19,7 @@ const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
           <Graticule className="stroke-current text-gray-600" />
           <Geographies
             className="fill-current text-gray-700"
-            geography={geoUrl}
+            geography={geo}
             stroke="#FFFFFF"
             strokeWidth={0.5}
           >
@@ -61,3 +58,4 @@ import {
   Graticule,
   Marker,
 } from "react-simple-maps";
+import { default as geo } from "./wolrd-110m";
