@@ -40,8 +40,7 @@ const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
       description={t("description")}
       openGraph={og}
       twitter={{
-        handle: "@igorbdsq",
-        site: "@site",
+        site: "@bedesqui",
         cardType: "summary_large_image",
       }}
       languageAlternates={[
