@@ -30,7 +30,11 @@ const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
           >
             {({ geographies }) =>
               geographies.map((geo) => (
-                <Geography key={geo.rsmKey} geography={geo} />
+                <Geography
+                  pointerEvents="none"
+                  key={geo.rsmKey}
+                  geography={geo}
+                />
               ))
             }
           </Geographies>
