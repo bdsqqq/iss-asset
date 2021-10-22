@@ -4,10 +4,17 @@ interface ChartProps {
 }
 
 const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
+  const [ref, bounds] = useMeasure({ polyfill: ResizeObserver });
+  useEffect(() => {
+    console.log(bounds);
+  }, [bounds]);
+
   return (
-    <>
+    <div className="w-full h-full" ref={ref}>
       {lat && lon && (
         <ComposableMap
+          width={bounds.width}
+          height={bounds.height}
           projection="geoAzimuthalEqualArea"
           projectionConfig={{
             scale: 300,
@@ -43,7 +50,7 @@ const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
           </Marker>
         </ComposableMap>
       )}
-    </>
+    </div>
   );
 };
 
@@ -57,3 +64,7 @@ import {
   Marker,
 } from "react-simple-maps";
 import { default as geo } from "./wolrd-110m";
+
+import useMeasure from "react-use-measure";
+import { ResizeObserver } from "@juggle/resize-observer";
+import { useEffect } from "react";
