@@ -4,11 +4,46 @@ export default function Home() {
     <>
       <PageHead t={t} lang={lang} />
       <Container>
-        <div className="relative h-screen">
-          <div className="relative h-full overflow-hidden">
+        <Box css={{ position: "relative", height: "100vh" }}>
+          <Box
+            css={{
+              position: "relative",
+              height: "100%",
+              overflow: "hidden",
+            }}
+          >
             <MapWrapper />
-          </div>
-        </div>
+          </Box>
+          <Box
+            css={{
+              color: "$slate12",
+              padding: "3rem",
+              fontSize: "3rem",
+
+              position: "absolute",
+              bottom: 0,
+              height: "25%",
+              width: "100%",
+              backgroundColor: "$slate1",
+
+              borderStyle: "solid",
+              borderWidth: "1px",
+              borderColor: "$slate7",
+
+              "@bp1": {
+                height: "100%",
+                width: "25%",
+              },
+
+              "@supports(backdrop-filter: saturate(150%) blur(20px))": {
+                backdropFilter: "saturate(180%) blur(8px)",
+                background: "none",
+              },
+            }}
+          >
+            Muito brabo
+          </Box>
+        </Box>
       </Container>
     </>
   );
@@ -76,5 +111,6 @@ import { OpenGraph } from "next-seo/lib/types";
 import useTranslation from "next-translate/useTranslation";
 import { Translate } from "next-translate";
 
+import Box from "@/ui/Box";
 import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
