@@ -5,6 +5,7 @@ const Chart = dynamic(() => import("./Chart"), {
 });
 
 export default function MapWrapper() {
+  const { lat, lon, setLatLon } = useIssStore();
   // Getting data
   const { data } = useSWR(API_URL, {
     revalidateOnFocus: true,
@@ -12,17 +13,15 @@ export default function MapWrapper() {
   });
   useEffect(() => {
     if (data) {
-      setLat(data.latitude);
-      setLon(data.longitude);
+      setLatLon(data);
     }
   }, [data]);
-  const [lat, setLat] = useState<undefined | number>();
-  const [lon, setLon] = useState<undefined | number>();
 
   return <Chart lon={lon} lat={lat} />;
 }
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useSWR from "swr";
-
 import dynamic from "next/dynamic";
+
+import { useIssStore } from "@/components/store/useIssStore";

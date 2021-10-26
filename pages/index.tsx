@@ -1,4 +1,6 @@
 export default function Home() {
+  const { lat, lon } = useIssStore();
+
   const { t, lang } = useTranslation("home");
   return (
     <>
@@ -17,22 +19,29 @@ export default function Home() {
           <Box
             css={{
               color: "$slate12",
-              padding: "3rem",
+              padding: "1rem",
               fontSize: "3rem",
 
               position: "absolute",
-              bottom: 0,
+              bottom: "1rem",
+              left: "1rem",
+              right: "1rem",
               height: "25%",
-              width: "100%",
+              width: "calc(100% - 2rem)",
               backgroundColor: "$slate1",
 
               borderStyle: "solid",
               borderWidth: "1px",
               borderColor: "$slate7",
+              borderRadius: "4px",
 
               "@bp1": {
-                height: "100%",
-                width: "25%",
+                height: "min-content",
+                width: "calc(480px - 2rem)",
+
+                right: "0rem",
+                top: "1rem",
+                bottom: "1rem",
               },
 
               "@supports(backdrop-filter: saturate(150%) blur(20px))": {
@@ -41,7 +50,13 @@ export default function Home() {
               },
             }}
           >
-            Muito brabo
+            <h1>
+              The <abbr title="International Space Station">ISS</abbr> is at:
+            </h1>
+            <ul>
+              <li>Latitude: {lat.toFixed(3)}</li>
+              <li>Longitude: {lon.toFixed(3)}</li>
+            </ul>
           </Box>
         </Box>
       </Container>
@@ -114,3 +129,4 @@ import { Translate } from "next-translate";
 import Box from "@/ui/Box";
 import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
+import { useIssStore } from "@/components/store/useIssStore";
