@@ -20,7 +20,6 @@ export default function Home() {
             css={{
               color: "$slate12",
               padding: "1rem",
-              fontSize: "3rem",
 
               position: "absolute",
               bottom: "1rem",
