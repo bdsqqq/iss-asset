@@ -9,7 +9,7 @@ export default function MapWrapper() {
   // Getting data
   const { data } = useSWR(API_URL, {
     revalidateOnFocus: true,
-    refreshInterval: 2 * 1000,
+    refreshInterval: 12 * 1000,
   });
   useEffect(() => {
     if (data) {
