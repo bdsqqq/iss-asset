@@ -27,6 +27,8 @@ const Chart: React.FC<ChartProps> = ({ lon, lat }) => {
               geographies.map((geo) => (
                 <Geography
                   pointerEvents="none"
+                  focusable="false"
+                  tabIndex={-1}
                   key={geo.rsmKey}
                   geography={geo}
                 />
