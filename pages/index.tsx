@@ -49,7 +49,7 @@ export default function Home() {
               <Trans
                 i18nKey="home:floatingPane"
                 components={{
-                  abbr: <abbr title={t("abrrText")} />,
+                  abbr: <Abbr title={t("abrrText")} />,
                 }}
               />
             </H1>
@@ -133,6 +133,10 @@ const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
     />
   );
 };
+
+const Abbr = styled("abbr", {
+  textDecoration: "none !important",
+});
 
 const H1 = styled("h1", {
   fontWeight: "300",
