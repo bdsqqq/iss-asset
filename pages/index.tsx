@@ -46,7 +46,12 @@ export default function Home() {
             }}
           >
             <H1>
-              The <abbr title="International Space Station">ISS</abbr> is at:
+              <Trans
+                i18nKey="home:floatingPane"
+                components={{
+                  abbr: <abbr title={t("abrrText")} />,
+                }}
+              />
             </H1>
             <Box
               css={{
@@ -151,6 +156,7 @@ const Coord = styled("p", {
 import { NextSeo } from "next-seo";
 import { OpenGraph } from "next-seo/lib/types";
 import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
 import { Translate } from "next-translate";
 
 import Box from "@/ui/Box";
