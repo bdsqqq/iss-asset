@@ -25,7 +25,7 @@ export default function Home() {
               bottom: "1rem",
               left: "1rem",
               right: "1rem",
-              height: "25%",
+              height: "min-content",
               width: "calc(100% - 2rem)",
               backgroundColor: "$slate1",
 
@@ -36,26 +36,35 @@ export default function Home() {
 
               "@bp1": {
                 height: "min-content",
-                width: "calc(480px - 2rem)",
-
-                right: "0rem",
-                top: "1rem",
-                bottom: "1rem",
+                width: "min-content",
               },
 
               "@supports(backdrop-filter: saturate(150%) blur(20px))": {
-                backdropFilter: "saturate(180%) blur(8px)",
+                backdropFilter: "saturate(180%) blur(6px)",
                 background: "none",
               },
             }}
           >
-            <h1>
+            <H1>
               The <abbr title="International Space Station">ISS</abbr> is at:
-            </h1>
-            <ul>
-              <li>Latitude: {lat.toFixed(3)}</li>
-              <li>Longitude: {lon.toFixed(3)}</li>
-            </ul>
+            </H1>
+            <Box
+              css={{
+                display: "flex",
+                gap: "2rem",
+
+                marginTop: "1rem",
+              }}
+            >
+              <FullWidthBox>
+                <H2>Latitude</H2>
+                <Coord>{lat.toFixed(3)}</Coord>
+              </FullWidthBox>
+              <FullWidthBox>
+                <H2>Longitude</H2>
+                <Coord>{lon.toFixed(3)}</Coord>
+              </FullWidthBox>
+            </Box>
           </Box>
         </Box>
       </Container>
@@ -120,6 +129,25 @@ const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
   );
 };
 
+const H1 = styled("h1", {
+  fontWeight: "300",
+  fontSize: "1.5rem",
+});
+
+const H2 = styled("h2", {
+  fontWeight: "700",
+  color: "$slate11",
+});
+
+const FullWidthBox = styled(Box, {
+  width: "100%",
+});
+
+const Coord = styled("p", {
+  fontSize: "2rem",
+  lineHeight: "1em",
+});
+
 import { NextSeo } from "next-seo";
 import { OpenGraph } from "next-seo/lib/types";
 import useTranslation from "next-translate/useTranslation";
@@ -129,3 +157,4 @@ import Box from "@/ui/Box";
 import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
 import { useIssStore } from "@/components/store/useIssStore";
+import { styled } from "stitches.config";
