@@ -1,30 +1,48 @@
 const Container: React.FC = ({ children }) => {
-  const childrenArray: any = Children.toArray(children);
-  const dark: boolean | undefined =
-    childrenArray[childrenArray.length - 1].props.dark;
-
   return (
-    <div className="relative min-h-screen">
-      <nav className="z-50 absolute flex justify-end items-start w-full px-4 py-4 my-0 md:pt-8 md:px-16 mx-auto">
-        <div>
-          <ChangeLang
-            generalClasses="p-1 sm:p-2 text-gray-100 lowercase"
-            activeClasses="font-bold"
-            inactiveClasses="text-gray-500 hover:text-gray-300 focus:text-gray-300"
-          />
-        </div>
-      </nav>
+    <Box
+      css={{
+        position: "relative",
+        minHeight: "100vh",
+        backgroundColor: "$slate1",
+      }}
+    >
+      <Nav>
+        <Box>
+          <ChangeLang />
+        </Box>
+      </Nav>
       <div className="relative w-full">
         <main className="flex flex-col justify-center">{children}</main>
-        <Footer dark={dark} />
+        {/* <Footer /> */}
       </div>
-    </div>
+    </Box>
   );
 };
 
+const Nav = styled("nav", {
+  position: "absolute",
+  zIndex: "1",
+  right: "1rem",
+  top: "1rem",
+  padding: "0 0.5rem",
+
+  backgroundColor: "$slate1",
+
+  borderStyle: "solid",
+  borderWidth: "1px",
+  borderColor: "$slate7",
+  borderRadius: "4px",
+
+  "@supports(backdrop-filter: saturate(150%) blur(20px))": {
+    backdropFilter: "saturate(180%) blur(6px)",
+    background: "none",
+  },
+});
+
 export default Container;
 
-import { Children } from "react";
-
+import { styled } from "stitches.config";
+import Box from "@/ui/Box";
 import Footer from "./Footer";
 import ChangeLang from "./ChangeLang";

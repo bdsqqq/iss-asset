@@ -1,20 +1,10 @@
-interface FooterProps {
-  dark?: boolean;
-}
-
-const Footer: React.FC<FooterProps> = ({ dark }) => {
+const Footer = () => {
   const { t } = usetranslation("common");
-  const linkClassList = `cursor-pointer text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition-all ${
-    dark ? "text-gray-100" : " text-gray-900"
-  }`;
+  const linkClassList =
+    "cursor-pointer text-slate12 text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition-all";
 
   return (
-    <footer
-      className={`flex flex-col items-center py-8 ${
-        dark ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"
-      }
-      `}
-    >
+    <footer className="flex flex-col items-center py-8 text-slate11">
       <div className="mb-4">
         {t("footerText")}
         <ExternalLink
