@@ -12,6 +12,7 @@
     "@radix-ui/colors": "^0.1.7",
     "@stitches/react": "^1.2.5",
     "autoprefixer": "^10.0.4",
+    "cobe": "^0.4.1",
     "framer-motion": "^3.3.0",
     "ioredis": "^4.27.1",
     "next": "^12.0.0",
