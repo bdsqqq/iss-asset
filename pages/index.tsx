@@ -5,13 +5,13 @@ export default function Home() {
   const { t, lang } = useTranslation("home");
 
   useEffect(() => {
-    let phi = 0;
+    let phi = (lat / 180) * Math.PI * -1;
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
       width: 300 * 2,
       height: 300 * 2,
-      phi: 0,
+      phi: phi, // 6.285 = 0 phi
       theta: 0,
       dark: 1,
       diffuse: 1.2,
@@ -22,13 +22,13 @@ export default function Home() {
       glowColor: [1, 1, 1],
       markers: [
         // longitude latitude
-        { location: [lon, lat], size: 0.05 },
+        // lat -90 is at 0 phi
+        { location: [0, lat - 90], size: 0.05 },
       ],
       onRender: (state: any) => {
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.
         state.phi = phi;
-        phi += 0.01;
       },
     });
 
@@ -206,3 +206,4 @@ import { styled } from "stitches.config";
 import { useEffect, useRef } from "react";
 
 import createGlobe from "cobe";
+import { stat } from "fs";
