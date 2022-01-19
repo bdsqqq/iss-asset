@@ -1,41 +1,7 @@
 export default function Home() {
   const { lat, lon } = useIssStore();
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const { t, lang } = useTranslation("home");
-
-  useEffect(() => {
-    let phi = (lat / 180) * Math.PI * -1;
-
-    const globe = createGlobe(canvasRef.current, {
-      devicePixelRatio: 2,
-      width: 300 * 2,
-      height: 300 * 2,
-      phi: phi, // 6.285 = 0 phi
-      theta: 0,
-      dark: 1,
-      diffuse: 1.2,
-      mapSamples: 16000,
-      mapBrightness: 6,
-      baseColor: [0.3, 0.3, 0.3],
-      markerColor: [0.1, 0.8, 1],
-      glowColor: [1, 1, 1],
-      markers: [
-        // longitude latitude
-        // lat -90 is at 0 phi
-        { location: [0, lat - 90], size: 0.05 },
-      ],
-      onRender: (state: any) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
-        state.phi = phi;
-      },
-    });
-
-    return () => {
-      globe.destroy();
-    };
-  }, []);
 
   return (
     <>
@@ -49,7 +15,7 @@ export default function Home() {
               overflow: "hidden",
             }}
           >
-            <canvas ref={canvasRef} style={{ width: 300, height: 300 }} />
+            <Globe />
           </Box>
           <Box
             css={{
@@ -203,7 +169,4 @@ import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
 import { useIssStore } from "@/components/store/useIssStore";
 import { styled } from "stitches.config";
-import { useEffect, useRef } from "react";
-
-import createGlobe from "cobe";
-import { stat } from "fs";
+import { Globe } from "@/components/globeStuff/Globe";
