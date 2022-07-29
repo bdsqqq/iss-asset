@@ -1,27 +1,29 @@
-const API_URL = `/api/issData`;
-
-const Chart = dynamic(() => import("./Chart"), {
-  loading: () => <></>,
-});
-
 export default function MapWrapper() {
-  const { lat, lon, setLatLon } = useIssStore();
-  // Getting data
-  const { data } = useSWR(API_URL, {
-    revalidateOnFocus: true,
-    refreshInterval: 12 * 1000,
-  });
+  const { data } = useQuery(
+    ["issData"],
+    () => {
+      return fetch("/api/issData").then((res) => res.json());
+    },
+    {
+      refetchOnWindowFocus: false,
+      refetchInterval: 1000,
+    }
+  );
+
   useEffect(() => {
     if (data) {
-      setLatLon(data);
+      console.log(data);
     }
   }, [data]);
 
-  return <Chart lon={lon} lat={lat} />;
+  if (data) {
+    return <Chart lon={data.latitude} lat={data.longitude} />;
+  }
+
+  return <></>;
 }
 
 import { useEffect } from "react";
-import useSWR from "swr";
-import dynamic from "next/dynamic";
 
-import { useIssStore } from "@/components/store/useIssStore";
+import { useQuery } from "@tanstack/react-query";
+import Chart from "./Chart";

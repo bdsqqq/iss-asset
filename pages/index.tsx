@@ -1,7 +1,9 @@
 export default function Home() {
-  const { lat, lon } = useIssStore();
-
   const { t, lang } = useTranslation("home");
+
+  const data: { latitude: number; longitude: number } | undefined =
+    useQueryClient().getQueryData(["issData"]);
+
   return (
     <>
       <PageHead t={t} lang={lang} />
@@ -63,11 +65,11 @@ export default function Home() {
             >
               <FullWidthBox>
                 <H2>Latitude</H2>
-                <Coord>{lat.toFixed(3)}</Coord>
+                <Coord>{data?.latitude.toFixed(3)}</Coord>
               </FullWidthBox>
               <FullWidthBox>
                 <H2>Longitude</H2>
-                <Coord>{lon.toFixed(3)}</Coord>
+                <Coord>{data?.longitude.toFixed(3)}</Coord>
               </FullWidthBox>
             </Box>
           </Box>
@@ -166,5 +168,5 @@ import { Translate } from "next-translate";
 import Box from "@/ui/Box";
 import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
-import { useIssStore } from "@/components/store/useIssStore";
 import { styled } from "stitches.config";
+import { useQueryClient } from "@tanstack/react-query";
