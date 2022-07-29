@@ -3,6 +3,7 @@ export default async () => {
   const { latitude, longitude } = await fetch(API_URL).then((res) =>
     res.json()
   );
+  console.log(latitude, longitude);
 
   return new Response(JSON.stringify({ latitude, longitude }), {
     status: 200,
