@@ -4,7 +4,7 @@ export default function MapWrapper() {
     ["issData"],
     () => {
       return fetch("/api/issData").then((res) => {
-        console.log(res.headers.entries());
+        console.log(res.headers.get("x-vercel-cache"));
         return res.json();
       });
     },
