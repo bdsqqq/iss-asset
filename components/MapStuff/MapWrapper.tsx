@@ -1,4 +1,5 @@
 export default function MapWrapper() {
+  const setCoords = useUpdateAtom(coords);
   const { data } = useQuery(
     ["issData"],
     () => {
@@ -10,6 +11,9 @@ export default function MapWrapper() {
     {
       refetchOnWindowFocus: false,
       refetchInterval: 1000,
+      onSuccess: (data) => {
+        setCoords([data.latitude, data.longitude]);
+      },
     }
   );
 
@@ -19,14 +23,12 @@ export default function MapWrapper() {
     }
   }, [data]);
 
-  if (data) {
-    return <Chart lon={data.latitude} lat={data.longitude} />;
-  }
-
-  return <></>;
+  return <Cobe />;
 }
 
 import { useEffect } from "react";
+import { useUpdateAtom } from "jotai/utils";
+import { coords } from "../../lib/store";
 
 import { useQuery } from "@tanstack/react-query";
-import Chart from "./Chart";
+import Cobe from "./Cobe";
