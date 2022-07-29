@@ -4,7 +4,7 @@ export default function MapWrapper() {
     ["issData"],
     () => {
       return fetch("/api/issData").then((res) => {
-        console.log(res.headers);
+        console.log(res.headers.entries());
         return res.json();
       });
     },
