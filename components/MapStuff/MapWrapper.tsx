@@ -2,7 +2,10 @@ export default function MapWrapper() {
   const { data } = useQuery(
     ["issData"],
     () => {
-      return fetch("/api/issData").then((res) => res.json());
+      return fetch("/api/issData").then((res) => {
+        console.log(res.headers);
+        return res.json();
+      });
     },
     {
       refetchOnWindowFocus: false,
