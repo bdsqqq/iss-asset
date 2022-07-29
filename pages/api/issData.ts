@@ -8,7 +8,7 @@ export default async () => {
     status: 200,
     headers: {
       "content-type": "application/json",
-      "Cache-Control": "s-maxage=1000, stale-while-revalidate",
+      "cache-Control": "s-maxage=1000, stale-while-revalidate",
     },
   });
 };
