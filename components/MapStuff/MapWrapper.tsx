@@ -1,27 +1,34 @@
-const API_URL = `/api/issData`;
-
-const Chart = dynamic(() => import("./Chart"), {
-  loading: () => <></>,
-});
-
 export default function MapWrapper() {
-  const { lat, lon, setLatLon } = useIssStore();
-  // Getting data
-  const { data } = useSWR(API_URL, {
-    revalidateOnFocus: true,
-    refreshInterval: 12 * 1000,
-  });
+  const setCoords = useUpdateAtom(coords);
+  const { data } = useQuery(
+    ["issData"],
+    () => {
+      return fetch("/api/issData").then((res) => {
+        console.log(res.headers.get("x-vercel-cache"));
+        return res.json();
+      });
+    },
+    {
+      refetchOnWindowFocus: false,
+      refetchInterval: 1000,
+      onSuccess: (data) => {
+        setCoords([data.latitude, data.longitude]);
+      },
+    }
+  );
+
   useEffect(() => {
     if (data) {
-      setLatLon(data);
+      console.log(data);
     }
   }, [data]);
 
-  return <Chart lon={lon} lat={lat} />;
+  return <Cobe />;
 }
 
 import { useEffect } from "react";
-import useSWR from "swr";
-import dynamic from "next/dynamic";
+import { useUpdateAtom } from "jotai/utils";
+import { coords } from "../../lib/store";
 
-import { useIssStore } from "@/components/store/useIssStore";
+import { useQuery } from "@tanstack/react-query";
+import Cobe from "./Cobe";

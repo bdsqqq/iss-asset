@@ -1,7 +1,8 @@
 export default function Home() {
-  const { lat, lon } = useIssStore();
-
   const { t, lang } = useTranslation("home");
+
+  const data = useAtomValue(coords);
+
   return (
     <>
       <PageHead t={t} lang={lang} />
@@ -63,11 +64,11 @@ export default function Home() {
             >
               <FullWidthBox>
                 <H2>Latitude</H2>
-                <Coord>{lat.toFixed(3)}</Coord>
+                <Coord>{data[0].toFixed(3)}</Coord>
               </FullWidthBox>
               <FullWidthBox>
                 <H2>Longitude</H2>
-                <Coord>{lon.toFixed(3)}</Coord>
+                <Coord>{data[1].toFixed(3)}</Coord>
               </FullWidthBox>
             </Box>
           </Box>
@@ -166,5 +167,8 @@ import { Translate } from "next-translate";
 import Box from "@/ui/Box";
 import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
-import { useIssStore } from "@/components/store/useIssStore";
 import { styled } from "stitches.config";
+import { useQueryClient } from "@tanstack/react-query";
+import { useEffect, useRef, useState } from "react";
+import { useAtomValue } from "jotai";
+import { coords } from "lib/store";
