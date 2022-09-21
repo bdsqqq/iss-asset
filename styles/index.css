@@ -1,35 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  @variants responsive {
-    /*this is here because next/image has inline padding build into it, which overwrites the padding from tailwind, this is the cleanest way I found to do this, sorry about this humanity but i'm about to use "!important caralho" here*/
-    .p-16-caralho {
-      padding: 4rem !caralho;
-    }
-    .p-24-caralho {
-      padding: 6rem !caralho;
-    }
-    .t-writing-mode-vlr {
-      writing-mode: vertical-lr;
-    }
-    .t-writing-mode-reset {
-      writing-mode: horizontal-tb;
-    }
-    .break-hiphen {
-      word-break: all;
-      hyphens: auto;
-    }
-    .dragHandle {
-      cursor: grab;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-    }
-    .dragHandle:active {
-      cursor: grabbing;
-      cursor: -moz-grabbing;
-      cursor: -webkit-grabbing;
-    }
-  }
-}
