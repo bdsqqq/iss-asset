@@ -1,10 +1,9 @@
 export default function MapWrapper() {
   const setCoords = useUpdateAtom(coords);
-  const { data } = useQuery(
+  useQuery(
     ["issData"],
     async () => {
       const res = await fetch("/api/issData");
-      console.log(res.headers.get("x-vercel-cache"));
       return await res.json();
     },
     {
@@ -18,16 +17,9 @@ export default function MapWrapper() {
     }
   );
 
-  useEffect(() => {
-    if (data) {
-      console.log(data);
-    }
-  }, [data]);
-
   return <Cobe />;
 }
 
-import { useEffect } from "react";
 import { useUpdateAtom } from "jotai/utils";
 import { coords } from "../../lib/store";
 
