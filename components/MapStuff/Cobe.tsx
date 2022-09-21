@@ -53,7 +53,7 @@ const Cobe = () => {
       mapSamples: 32000,
       mapBrightness: 1,
       baseColor: [1, 1, 1],
-      markerColor: [251 / 255, 21 / 255, 251 / 255],
+      markerColor: [229 / 255, 72 / 255, 77 / 255],
       glowColor: [0.3, 0.3, 0.3],
       markers: [{ location: markerRef.current, size: 0.1 }],
       scale: 1,
