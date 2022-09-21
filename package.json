@@ -23,7 +23,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-use-measure": "^2.0.4",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
     "@types/node": "^14.14.22",
