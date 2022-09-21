@@ -106,40 +106,6 @@ const Cobe = () => {
           transition: "opacity 1s ease",
         }}
       />
-      <div
-        className="flex justify-center control-buttons"
-        style={{ gap: ".5rem" }}
-      >
-        Rotate to:
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(31.21, 6.166);
-          }}
-        >
-          San Francisco{" "}
-        </button>
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(52.52, 13.405);
-          }}
-        >
-          Berlin{" "}
-        </button>
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(35.676, 139.65);
-          }}
-        >
-          Tokyo{" "}
-        </button>
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(-34.6, -58.38);
-          }}
-        >
-          Buenos Aires
-        </button>
-      </div>
     </div>
   );
 };
