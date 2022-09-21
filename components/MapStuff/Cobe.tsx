@@ -87,7 +87,7 @@ const Cobe = () => {
   }, []);
 
   return (
-    <div className="aspect-square absolute inset-0 min-h-screen m-auto -ml-[30%] sm:ml-0">
+    <div className="aspect-square absolute inset-0 min-h-screen m-auto -ml-[30%] sm:ml-0 transition-all duration-[240ms]">
       <canvas
         ref={canvasRef}
         className="w-full h-full opacity-0 transition-opacity duration-1000"
