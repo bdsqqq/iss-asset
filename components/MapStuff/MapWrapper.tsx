@@ -11,7 +11,9 @@ export default function MapWrapper() {
       refetchOnWindowFocus: false,
       refetchInterval: 1000,
       onSuccess: (data) => {
-        setCoords([data.latitude, data.longitude]);
+        if (data.latitude && data.longitude) {
+          setCoords([data.latitude, data.longitude]);
+        }
       },
     }
   );
