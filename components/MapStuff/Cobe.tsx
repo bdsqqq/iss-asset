@@ -87,23 +87,12 @@ const Cobe = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        aspectRatio: "1",
-        margin: "auto",
-        position: "absolute",
-        inset: 0,
-        minHeight: "100vh",
-      }}
-    >
+    <div className="aspect-square absolute inset-0 min-h-screen m-auto -ml-[30%] sm:ml-0">
       <canvas
         ref={canvasRef}
+        className="w-full h-full opacity-0 transition-opacity duration-1000"
         style={{
-          width: "100%",
-          height: "100%",
           contain: "layout paint size",
-          opacity: 0,
-          transition: "opacity 1s ease",
         }}
       />
     </div>
