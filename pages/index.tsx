@@ -27,7 +27,7 @@ export default function Home() {
                     Latitude
                   </span>
                   <br />
-                  <span className="text-4xl tabular-nums font-normal text-slate12">
+                  <span className="text-4xl tabular-nums block text-right">
                     {data[0].toFixed(3)}
                   </span>
                 </h2>
@@ -38,7 +38,7 @@ export default function Home() {
                     Longitude
                   </span>
                   <br />
-                  <span className="text-4xl tabular-nums font-normal text-slate12">
+                  <span className="text-4xl tabular-nums block text-right">
                     {data[1].toFixed(3)}
                   </span>
                 </h2>
