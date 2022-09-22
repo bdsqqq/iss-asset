@@ -4,49 +4,48 @@ export default function Home() {
   return (
     <>
       <PageHead />
-      <Container>
-        <div className="relative h-screen">
-          <div className="relative h-full overflow-hidden">
-            <MapWrapper />
-          </div>
-          <div className="text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min  border border-slate7 rounded-sm transition-all backdrop-blur-xl backdrop-saturate-[180%]">
-            <h1 className="text-2xl text-slate11 w-max">
-              The{" "}
-              <abbr
-                className="underline-offset-2"
-                title="International Space Station"
-              >
-                ISS
-              </abbr>{" "}
-              is at:
-            </h1>
-            <div className="flex flex-col gap-2 mt-4">
-              <div className="w-full">
-                <h2>
-                  <span className="text-slate11 text-xs font-bold tracking-widest">
-                    Latitude
-                  </span>
-                  <br />
-                  <span className="text-4xl tabular-nums block text-right">
-                    {data[0].toFixed(3)}
-                  </span>
-                </h2>
-              </div>
-              <div className="w-full">
-                <h2>
-                  <span className="text-slate11 text-xs font-bold tracking-widest">
-                    Longitude
-                  </span>
-                  <br />
-                  <span className="text-4xl tabular-nums block text-right">
-                    {data[1].toFixed(3)}
-                  </span>
-                </h2>
-              </div>
+
+      <div className="relative h-screen bg-slate1">
+        <div className="relative h-full overflow-hidden">
+          <MapWrapper />
+        </div>
+        <div className="text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min  border border-slate7 rounded-sm transition-all backdrop-blur-xl backdrop-saturate-[180%]">
+          <h1 className="text-2xl text-slate11 w-max">
+            The{" "}
+            <abbr
+              className="underline-offset-2"
+              title="International Space Station"
+            >
+              ISS
+            </abbr>{" "}
+            is at:
+          </h1>
+          <div className="flex flex-col gap-2 mt-4">
+            <div className="w-full">
+              <h2>
+                <span className="text-slate11 text-xs font-bold tracking-widest">
+                  Latitude
+                </span>
+                <br />
+                <span className="text-4xl tabular-nums block text-right">
+                  {data[0].toFixed(3)}
+                </span>
+              </h2>
+            </div>
+            <div className="w-full">
+              <h2>
+                <span className="text-slate11 text-xs font-bold tracking-widest">
+                  Longitude
+                </span>
+                <br />
+                <span className="text-4xl tabular-nums block text-right">
+                  {data[1].toFixed(3)}
+                </span>
+              </h2>
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </>
   );
 }
