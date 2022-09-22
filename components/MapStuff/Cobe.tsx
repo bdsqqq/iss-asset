@@ -53,7 +53,7 @@ const Cobe = () => {
       mapSamples: 32000,
       mapBrightness: 1,
       baseColor: [1, 1, 1],
-      markerColor: [251 / 255, 21 / 255, 251 / 255],
+      markerColor: [229 / 255, 72 / 255, 77 / 255],
       glowColor: [0.3, 0.3, 0.3],
       markers: [{ location: markerRef.current, size: 0.1 }],
       scale: 1,
@@ -87,59 +87,14 @@ const Cobe = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        aspectRatio: "1",
-        margin: "auto",
-        position: "absolute",
-        inset: 0,
-        minHeight: "100vh",
-      }}
-    >
+    <div className="aspect-square absolute inset-0 min-h-screen m-auto -ml-[30%] sm:ml-0 transition-all duration-[240ms]">
       <canvas
         ref={canvasRef}
+        className="w-full h-full opacity-0 transition-opacity duration-1000"
         style={{
-          width: "100%",
-          height: "100%",
           contain: "layout paint size",
-          opacity: 0,
-          transition: "opacity 1s ease",
         }}
       />
-      <div
-        className="flex justify-center control-buttons"
-        style={{ gap: ".5rem" }}
-      >
-        Rotate to:
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(31.21, 6.166);
-          }}
-        >
-          San Francisco{" "}
-        </button>
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(52.52, 13.405);
-          }}
-        >
-          Berlin{" "}
-        </button>
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(35.676, 139.65);
-          }}
-        >
-          Tokyo{" "}
-        </button>
-        <button
-          onClick={() => {
-            focusRef.current = locationToAngles(-34.6, -58.38);
-          }}
-        >
-          Buenos Aires
-        </button>
-      </div>
     </div>
   );
 };

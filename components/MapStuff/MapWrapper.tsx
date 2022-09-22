@@ -1,32 +1,25 @@
 export default function MapWrapper() {
   const setCoords = useUpdateAtom(coords);
-  const { data } = useQuery(
+  useQuery(
     ["issData"],
-    () => {
-      return fetch("/api/issData").then((res) => {
-        console.log(res.headers.get("x-vercel-cache"));
-        return res.json();
-      });
+    async () => {
+      const res = await fetch("/api/issData");
+      return await res.json();
     },
     {
       refetchOnWindowFocus: false,
       refetchInterval: 1000,
       onSuccess: (data) => {
-        setCoords([data.latitude, data.longitude]);
+        if (data.latitude && data.longitude) {
+          setCoords([data.latitude, data.longitude]);
+        }
       },
     }
   );
 
-  useEffect(() => {
-    if (data) {
-      console.log(data);
-    }
-  }, [data]);
-
   return <Cobe />;
 }
 
-import { useEffect } from "react";
 import { useUpdateAtom } from "jotai/utils";
 import { coords } from "../../lib/store";
 

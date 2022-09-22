@@ -1,126 +1,86 @@
 export default function Home() {
-  const { t, lang } = useTranslation("home");
-
   const data = useAtomValue(coords);
 
   return (
     <>
-      <PageHead t={t} lang={lang} />
-      <Container>
-        <Box css={{ position: "relative", height: "100vh" }}>
-          <Box
-            css={{
-              position: "relative",
-              height: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <MapWrapper />
-          </Box>
-          <Box
-            css={{
-              color: "$slate12",
-              padding: "1rem",
+      <PageHead />
 
-              position: "absolute",
-              bottom: "1rem",
-              left: "1rem",
-              right: "1rem",
-              height: "min-content",
-              width: "calc(100% - 2rem)",
-              backgroundColor: "$slate1",
-
-              borderStyle: "solid",
-              borderWidth: "1px",
-              borderColor: "$slate7",
-              borderRadius: "4px",
-
-              "@bp1": {
-                height: "min-content",
-                width: "min-content",
-              },
-
-              "@supports(backdrop-filter: saturate(150%) blur(20px))": {
-                backdropFilter: "saturate(180%) blur(6px)",
-                background: "none",
-              },
-            }}
-          >
-            <H1>
-              <Trans
-                i18nKey="home:floatingPane"
-                components={{
-                  abbr: <Abbr title={t("abrrText")} />,
-                }}
-              />
-            </H1>
-            <Box
-              css={{
-                display: "flex",
-                gap: "2rem",
-
-                marginTop: "1rem",
-              }}
+      <div className="relative h-screen bg-slate1">
+        <div className="relative h-full overflow-hidden">
+          <MapWrapper />
+        </div>
+        <main className="flex flex-col gap-2 text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min border border-slate7 rounded-sm transition-all backdrop-blur-xl backdrop-saturate-[180%]">
+          <h1 className="text-2xl text-slate11 w-max">
+            The{" "}
+            <abbr
+              className="underline-offset-2"
+              title="International Space Station"
             >
-              <FullWidthBox>
-                <H2>Latitude</H2>
-                <Coord>{data[0].toFixed(3)}</Coord>
-              </FullWidthBox>
-              <FullWidthBox>
-                <H2>Longitude</H2>
-                <Coord>{data[1].toFixed(3)}</Coord>
-              </FullWidthBox>
-            </Box>
-          </Box>
-        </Box>
-      </Container>
+              ISS
+            </abbr>{" "}
+            is at:
+          </h1>
+          <div className="flex flex-col">
+            <div className="w-full">
+              <h2>
+                <span className="text-slate11 text-xs font-bold tracking-widest">
+                  Latitude
+                </span>
+                <br />
+                <span className="text-4xl tabular-nums block text-right">
+                  {data[0].toFixed(3)}
+                </span>
+              </h2>
+            </div>
+            <div className="w-full">
+              <h2>
+                <span className="text-slate11 text-xs font-bold tracking-widest">
+                  Longitude
+                </span>
+                <br />
+                <span className="text-4xl tabular-nums block text-right">
+                  {data[1].toFixed(3)}
+                </span>
+              </h2>
+            </div>
+          </div>
+        </main>
+      </div>
     </>
   );
 }
-interface SEOProps {
-  t: Translate;
-  lang: string;
-}
 
-const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
+const PageHead: React.FC = () => {
+  const SEOData = {
+    title: "Where's the ISS?",
+    description:
+      "Born from the human curiosity, the ISS is proof that not even the sky is a limit for us. See where the ISS is right now!",
+  };
+
   const og: OpenGraph = {
     type: "website",
-    url: `https://iss.igorbedesqui.com${lang != "en" ? "/" + lang : ""}`,
-    title: t("title"),
-    description: t("description"),
-    site_name: t("siteName"),
+    url: `https://iss.igorbedesqui.com`,
+    title: SEOData.title,
+    description: SEOData.description,
+    site_name: "Where's the iss?",
     images: [
       {
-        url: `https://iss.igorbedesqui.com/images/og/ISS_${lang}.png`,
+        url: `https://iss.igorbedesqui.com/images/og/ISS.png`,
         width: 1200,
         height: 627,
-        alt: t("ogAlt"),
+        alt: "Screenshot from the website",
       },
     ],
   };
   return (
     <NextSeo
-      title={t("title")}
-      description={t("description")}
+      title={SEOData.title}
+      description={SEOData.description}
       openGraph={og}
       twitter={{
         site: "@bedesqui",
         cardType: "summary_large_image",
       }}
-      languageAlternates={[
-        {
-          hrefLang: "pt",
-          href: `https://iss.igorbedesqui.com/pt`,
-        },
-        {
-          hrefLang: "en",
-          href: `https://iss.igorbedesqui.com`,
-        },
-        {
-          hrefLang: "x-default",
-          href: `https://iss.igorbedesqui.com`,
-        },
-      ]}
       additionalMetaTags={[
         {
           property: "viewport",
@@ -135,40 +95,9 @@ const PageHead: React.FC<SEOProps> = ({ t, lang }) => {
   );
 };
 
-const Abbr = styled("abbr", {
-  textDecoration: "none !important",
-});
-
-const H1 = styled("h1", {
-  fontWeight: "300",
-  fontSize: "1.5rem",
-});
-
-const H2 = styled("h2", {
-  fontWeight: "700",
-  color: "$slate11",
-});
-
-const FullWidthBox = styled(Box, {
-  width: "100%",
-});
-
-const Coord = styled("p", {
-  fontSize: "2rem",
-  lineHeight: "1em",
-});
-
 import { NextSeo } from "next-seo";
 import { OpenGraph } from "next-seo/lib/types";
-import useTranslation from "next-translate/useTranslation";
-import Trans from "next-translate/Trans";
-import { Translate } from "next-translate";
 
-import Box from "@/ui/Box";
-import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
-import { styled } from "stitches.config";
-import { useQueryClient } from "@tanstack/react-query";
-import { useEffect, useRef, useState } from "react";
 import { useAtomValue } from "jotai";
 import { coords } from "lib/store";
