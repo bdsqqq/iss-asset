@@ -1,3 +1,3 @@
 module.exports = {
-  plugins: ["tailwindcss", "autoprefixer", "postcss-caralho"],
+  plugins: ["tailwindcss", "autoprefixer"],
 };
