@@ -57,32 +57,33 @@ const PageHead: React.FC = () => {
       "Born from the human curiosity, the ISS is proof that not even the sky is a limit for us. See where the ISS is right now!",
   };
 
-  const og: OpenGraph = {
-    type: "website",
-    url: `https://iss.igorbedesqui.com`,
-    title: SEOData.title,
-    description: SEOData.description,
-    site_name: "Where's the iss?",
-    images: [
-      {
-        url: `https://iss.igorbedesqui.com/images/og/iss_facebook.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Globe marking the current location of the International Space Station",
-      },
-      {
-        url: `https://iss.igorbedesqui.com/images/og/iss.jpg`,
-        width: 1080,
-        height: 540,
-        alt: "Globe marking the current location of the International Space Station",
-      },
-    ],
-  };
   return (
     <NextSeo
       title={SEOData.title}
       description={SEOData.description}
-      openGraph={og}
+      openGraph={{
+        type: "website",
+        url: `https://iss.igorbedesqui.com`,
+        title: SEOData.title,
+        description: SEOData.description,
+        site_name: "Where's the iss?",
+        images: [
+          {
+            url: `https://iss.igorbedesqui.com/images/og/iss_facebook.jpg`,
+            width: 1200,
+            height: 630,
+            alt: "Globe marking the current location of the International Space Station",
+            type: "image/jpeg",
+          },
+          {
+            url: `https://iss.igorbedesqui.com/images/og/iss.jpg`,
+            width: 1080,
+            height: 540,
+            alt: "Globe marking the current location of the International Space Station",
+            type: "image/jpeg",
+          },
+        ],
+      }}
       twitter={{
         site: "@bedesqui",
         cardType: "summary_large_image",
