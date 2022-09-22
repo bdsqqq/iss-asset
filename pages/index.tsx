@@ -98,7 +98,6 @@ const PageHead: React.FC = () => {
 import { NextSeo } from "next-seo";
 import { OpenGraph } from "next-seo/lib/types";
 
-import Container from "../components/Container";
 import MapWrapper from "../components/MapStuff/MapWrapper";
 import { useAtomValue } from "jotai";
 import { coords } from "lib/store";
