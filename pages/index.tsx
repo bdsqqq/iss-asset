@@ -65,10 +65,16 @@ const PageHead: React.FC = () => {
     site_name: "Where's the iss?",
     images: [
       {
-        url: `https://iss.igorbedesqui.com/images/og/ISS.png`,
+        url: `https://iss.igorbedesqui.com/images/og/iss_facebook.jpg`,
         width: 1200,
-        height: 627,
-        alt: "Screenshot from the website",
+        height: 630,
+        alt: "Globe marking the current location of the International Space Station",
+      },
+      {
+        url: `https://iss.igorbedesqui.com/images/og/iss.jpg`,
+        width: 1080,
+        height: 540,
+        alt: "Globe marking the current location of the International Space Station",
       },
     ],
   };
