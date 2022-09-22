@@ -9,7 +9,7 @@ export default function Home() {
         <div className="relative h-full overflow-hidden">
           <MapWrapper />
         </div>
-        <div className="text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min  border border-slate7 rounded-sm transition-all backdrop-blur-xl backdrop-saturate-[180%]">
+        <main className="flex flex-col gap-2 text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min border border-slate7 rounded-sm transition-all backdrop-blur-xl backdrop-saturate-[180%]">
           <h1 className="text-2xl text-slate11 w-max">
             The{" "}
             <abbr
@@ -20,7 +20,7 @@ export default function Home() {
             </abbr>{" "}
             is at:
           </h1>
-          <div className="flex flex-col gap-2 mt-4">
+          <div className="flex flex-col">
             <div className="w-full">
               <h2>
                 <span className="text-slate11 text-xs font-bold tracking-widest">
@@ -44,7 +44,7 @@ export default function Home() {
               </h2>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );
