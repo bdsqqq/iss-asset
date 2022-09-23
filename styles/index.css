@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+      @supports(backdrop-filter: saturate(150%)) {
+         .glass {
+            background: transparent;
+            backdrop-filter: saturate(180%) blur(24px);
+         }
+      }
+   }
+}

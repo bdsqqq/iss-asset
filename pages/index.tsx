@@ -9,7 +9,7 @@ export default function Home() {
         <div className="relative h-full overflow-hidden">
           <MapWrapper />
         </div>
-        <main className="flex flex-col gap-2 text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min border border-slate7 rounded-sm transition-all backdrop-blur-xl backdrop-saturate-[180%]">
+        <main className="flex flex-col gap-2 text-slate12 p-4 absolute bottom-4 right-4 left-4 h-min w-min border border-slate7 rounded-sm transition-all bg-slate1 glass">
           <h1 className="text-2xl text-slate11 w-max">
             The{" "}
             <abbr
