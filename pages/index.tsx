@@ -3,7 +3,17 @@ export default function Home() {
 
   return (
     <>
-      <PageHead />
+      <Head>
+        <PageHead />
+        <Partytown debug={true} forward={["dataLayer.push"]} />
+        <script
+          async
+          defer
+          data-website-id="1bca272f-1b2d-45e7-831d-281bc0a07e7a"
+          src="https://umami.igorbedesqui.com/umami.js"
+          type="text/partytown"
+        />
+      </Head>
 
       <div className="relative h-screen bg-slate1">
         <div className="relative h-full overflow-hidden">
@@ -102,9 +112,10 @@ const PageHead: React.FC = () => {
   );
 };
 
+import Head from "next/head";
 import { NextSeo } from "next-seo";
-import { OpenGraph } from "next-seo/lib/types";
+import { Partytown } from "@builder.io/partytown/react";
+import { useAtomValue } from "jotai";
 
 import MapWrapper from "../components/MapStuff/MapWrapper";
-import { useAtomValue } from "jotai";
 import { coords } from "lib/store";
