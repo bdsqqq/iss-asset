@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <Script
+          strategy="afterInteractive"
           data-website-id="e7afd50c-8f87-4a3a-a19e-b42c67e3c4a7"
           src="https://umami.igorbedesqui.com/umami.js"
         />
