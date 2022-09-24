@@ -1,5 +1,6 @@
 import "../styles/index.css";
 import Head from "next/head";
+import Script from "next/script";
 import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -27,6 +28,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script
+          strategy="worker"
+          async
+          defer
+          data-website-id="e7afd50c-8f87-4a3a-a19e-b42c67e3c4a7"
+          src="https://umami.igorbedesqui.com/umami.js"
+        />
       </Head>
       <Component {...pageProps} />
     </QueryClientProvider>
