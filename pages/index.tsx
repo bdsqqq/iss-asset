@@ -9,7 +9,7 @@ export default function Home() {
         <script
           async
           defer
-          data-website-id="1bca272f-1b2d-45e7-831d-281bc0a07e7a"
+          data-website-id="e7afd50c-8f87-4a3a-a19e-b42c67e3c4a7"
           src="https://umami.igorbedesqui.com/umami.js"
           type="text/partytown"
         />
