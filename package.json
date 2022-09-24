@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.7.0",
     "@tanstack/react-query": "^4.0.10",
     "cobe": "^0.5.0",
     "jotai": "^1.7.6",
